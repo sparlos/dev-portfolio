@@ -1,0 +1,20 @@
+.fancybox {
+  $size: 40px;
+
+  width: $size;
+  height: $size;
+  position: absolute;
+
+  left: 20%;
+  top: 155px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    border: 3px solid #718096;
+  }
+}
