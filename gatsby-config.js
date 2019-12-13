@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Raleway', 'Kanit']
+          families: ['Raleway:300,400,500,600,700']
         }
       }
     },

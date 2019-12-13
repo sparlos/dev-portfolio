@@ -221,6 +221,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'Raleway',
         '-apple-system',
         'BlinkMacSystemFont',
         '"Segoe UI"',
@@ -261,6 +262,12 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '7xl': '8rem',
+      '8xl': '10rem',
+      '9xl': '15rem',
+      '10xl': '20rem',
+      '11xl': '28rem',
+      '12xl': '30rem'
     },
     fontWeight: {
       hairline: '100',

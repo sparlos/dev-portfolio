@@ -6,7 +6,9 @@
   position: absolute;
 
   left: 20%;
-  top: 155px;
+  top: 110px;
+
+  z-index: -100;
 
   &:after {
     content: '';

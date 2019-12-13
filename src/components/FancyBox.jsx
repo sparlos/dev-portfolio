@@ -7,15 +7,15 @@ const FancyBox = ({ custom }) => {
   const boxVariants = {
     visible: i => ({
       opacity: 1,
+      x: 0,
       y: 0,
-      cx: 500,
       transition: {
         type: 'spring',
         damping: 300,
         delay: i * 0.1
       }
     }),
-    hidden: { opacity: 0, y: 40, rotate: 0 },
+    hidden: { opacity: 0, x: -20, y: -5, rotate: 0 },
   }
 
   return (

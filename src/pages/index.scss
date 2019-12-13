@@ -1,0 +1,17 @@
+.heading {
+  position: relative;
+
+  &__top, &__bottom {
+    letter-spacing: 15px;
+    margin-left: 8px;
+  }
+
+  &__top {
+    position: absolute;
+    top: 220px;
+  }
+
+  &__bottom {
+    
+  }
+}

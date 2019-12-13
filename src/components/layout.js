@@ -17,7 +17,7 @@ import Box from "../components/Box"
 import FancyBox from "../components/FancyBox"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, selected }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -38,6 +38,7 @@ const Layout = ({ children }) => {
     hidden: { opacity: 0 },
   }
 
+
   return (
     <motion.div
       initial="hidden"
@@ -46,11 +47,11 @@ const Layout = ({ children }) => {
       className="relative lg:w-11/12 md:w-full bg-gray-100 h-screen mx-auto"
       style={{
         minHeight: 850,
+        zIndex: 0,
       }}
     >
-      <FancyBox
-        custom={2}
-      />
+      { children }
+      <FancyBox custom={2} />
       <Box
         size={56}
         position={{
@@ -58,7 +59,8 @@ const Layout = ({ children }) => {
           top: 70,
         }}
         rotation={45}
-        custom={0}
+        custom={1}
+        selected={0 === selected}
       />
 
       <Box
@@ -68,7 +70,8 @@ const Layout = ({ children }) => {
           bottom: 175,
         }}
         rotation={15}
-        custom={1}
+        custom={2}
+        selected={1 === selected}
       />
 
       <Box
@@ -78,7 +81,8 @@ const Layout = ({ children }) => {
           bottom: 175,
         }}
         rotation={30}
-        custom={2}
+        custom={3}
+        selected={2 === selected}
       />
     </motion.div>
   )
