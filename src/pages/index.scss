@@ -1,14 +1,39 @@
 .heading {
   position: relative;
 
+  &__text {
+    position: relative;
+  }
+  
+
   &__top, &__bottom {
-    letter-spacing: 15px;
     margin-left: 8px;
+    letter-spacing: 3px;
+
+    @include breakpoint(sm) {
+      letter-spacing: 4px;
+    }
+
+    @include breakpoint(lg) {
+      letter-spacing: 8px;
+    }
+    
+    @include breakpoint(xl) {
+      letter-spacing: 15px;
+    }
   }
 
   &__top {
     position: absolute;
-    top: 220px;
+    top: 100px; 
+
+    @include breakpoint(sm) {
+      top: 160px;
+    }
+
+    @include breakpoint(lg) {
+      top: 220px;
+    }
   }
 
   &__bottom {

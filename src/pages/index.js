@@ -15,23 +15,25 @@ const IndexPage = () => {
   return (
     <Layout selected={selected}>
       <SEO title="Home" />
-      <motion.div 
+      <motion.div
         className="heading w-full text-center relative mx-auto font-sans text-gray-900"
-        initial={{y: 150, opacity: 0}}
-        animate={{y: 0, opacity: 1}}
+        initial={{ y: 150, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{
-          type: 'spring',
-          damping: 400
+          type: "spring",
+          damping: 400,
         }}
       >
-        <div className="heading__text inline-block">
-          <span className="heading__s lg:text-11xl">S</span>
-          <span className="heading__top lg:text-7xl">tephen</span>
-          <span className="heading__bottom lg:text-7xl">parling</span>
-          <div className="font-thin text-gray-600 -mt-24 mr-8 text-xl text-right">
+        <div className="heading__text inline-block xl:-mt-6 lg:-mt-4 mt-16 xl:text-7xl lg:text-6xl sm:text-5xl text-4xl">
+          <span className="heading__s xl:text-11xl lg:text-10xl sm:text-9xl text-8xl">
+            S
+          </span>
+          <span className="heading__top">tephen</span>
+          <span className="heading__bottom">parling</span>
+          <div className="sm:font-thin font-medium text-gray-600 lg:-mt-24 sm:-mt-12 -mt-4 sm:mr-8 text-base sm:text-xl text-right">
             Fullstack Web Developer & Designer
           </div>
-          <ul className="nav font-medium text-right mr-8 mt-8 text-2xl underline">
+          <ul className="nav font-medium sm:text-right text-center sm:mr-8 mt-8 sm:text-2xl text-xl underline">
             <li className="">
               <span
                 onPointerEnter={() => setSelected(0)}

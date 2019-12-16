@@ -6,7 +6,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        data: `@import "${__dirname}/src/styles/styles";`
+      }
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-web-font-loader`,

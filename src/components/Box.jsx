@@ -17,14 +17,18 @@ const Box = ({ size, position, rotation, custom, selected }) => {
     hidden: { opacity: 0, y: 200, rotate: 0 },
     selected: {
       opacity: 1, rotate: 0, backgroundColor: '#cbd5e0', transition: {
-        type: 'spring',
-        velocity: .5
+        rotate: {
+          type: 'spring',
+          velocity: .5
+        }
       }
     },
     deselected: {
-      opacity: 1, rotate: rotation, backgroundColor: '#e2e8f0', transition: {
-        type: 'spring',
-        velocity: .5
+      opacity: 1, rotate: rotation, backgroundColor: '#edf2f7', transition: {
+        rotate: {
+          type: 'spring',
+          velocity: .5
+        }
       }
     },
   }
@@ -40,12 +44,8 @@ const Box = ({ size, position, rotation, custom, selected }) => {
   }
 
   return (
-    <motion.div className={`bg-gray-200 w-${size} h-${size} absolute`}
+    <motion.div className={`bg-gray-200 w-${size} h-${size} absolute box box--${position}`}
       style={{
-        right: position.right,
-        top: position.top,
-        left: position.left,
-        bottom: position.bottom,
         transform: `rotate(${rotation}deg)`,
         zIndex: -100
       }}

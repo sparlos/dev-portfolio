@@ -1,0 +1,33 @@
+.box {
+  transition: right .3s, top .3s, bottom .3s, left .3s;
+
+  &--1 {
+    right: -30%;
+    top: -30px;
+
+    @include breakpoint(sm) {
+      right: 10%;
+      top: 70px;
+    }
+    
+  }
+
+  &--2 {
+    left: -10%;
+    bottom: 50px;
+
+    @include breakpoint(sm) {
+      left: 15%;
+      bottom: 175px;
+    }
+  }
+
+  &--3 {
+    right: 0;
+
+    @include breakpoint(sm) {
+      right: 15%;
+      bottom: 175px;
+    }
+  }
+}

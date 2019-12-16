@@ -15,7 +15,9 @@ import Header from "./header"
 
 import Box from "../components/Box"
 import FancyBox from "../components/FancyBox"
-import "./layout.css"
+
+import "./tailwind.css"
+import "./box.scss"
 
 const Layout = ({ children, selected }) => {
   const data = useStaticQuery(graphql`
@@ -44,9 +46,10 @@ const Layout = ({ children, selected }) => {
       initial="hidden"
       animate="visible"
       variants={backgroundVariants}
-      className="relative lg:w-11/12 md:w-full bg-gray-100 h-screen mx-auto"
+      className="relative lg:w-11/12 md:w-full bg-gray-100 h-screen mx-auto overflow-hidden"
       style={{
-        minHeight: 850,
+        height: '100vh',
+        minHeight: 720,
         zIndex: 0,
       }}
     >
@@ -54,10 +57,7 @@ const Layout = ({ children, selected }) => {
       <FancyBox custom={2} />
       <Box
         size={56}
-        position={{
-          right: "10%",
-          top: 70,
-        }}
+        position={1}
         rotation={45}
         custom={1}
         selected={0 === selected}
@@ -65,10 +65,7 @@ const Layout = ({ children, selected }) => {
 
       <Box
         size={40}
-        position={{
-          left: "15%",
-          bottom: 175,
-        }}
+        position={2}
         rotation={15}
         custom={2}
         selected={1 === selected}
@@ -76,10 +73,7 @@ const Layout = ({ children, selected }) => {
 
       <Box
         size={32}
-        position={{
-          right: "15%",
-          bottom: 175,
-        }}
+        position={3}
         rotation={30}
         custom={3}
         selected={2 === selected}
