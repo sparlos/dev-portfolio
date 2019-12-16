@@ -31,6 +31,15 @@ const Box = ({ size, position, rotation, custom, path }) => {
         mass: 5,
         damping: 300
       }
+    },
+    contact: {
+      opacity: 0,
+      y: 200,
+      transition: {
+        type: 'spring',
+        mass: 5,
+        damping: 300
+      }
     }
     
   }
@@ -39,6 +48,8 @@ const Box = ({ size, position, rotation, custom, path }) => {
     switch(path) {
       case '/about/':
         return 'about'
+      case '/contact/':
+        return 'contact'
       default:
         return 'visible'
     }

@@ -8,7 +8,7 @@ const About = () => {
     <TransitionState>
       {({ transitionStatus }) => (
         <motion.div
-          className="md:w-3/6 w-5/6 lg:ml-56 font-sans lg:mt-40 mt-32 mx-auto "
+          className="md:w-3/6 w-5/6 lg:ml-56 font-sans lg:mt-40 mt-32 mx-auto"
           initial={{
             opacity: 0,
             x: -200,
@@ -22,8 +22,8 @@ const About = () => {
             },
           }}
         >
-          <h1 className="text-5xl font-normal tracking-widest">About Me</h1>
-          <div className="mt-12">
+          <h1 className="text-5xl font-normal tracking-widest">About</h1>
+          <div className="mt-12 md:leading-relaxed">
             <p className="mt-6">
               I'm Stephen, a driven young professional looking to enter the
               world of full stack web design & development. I've spent the last

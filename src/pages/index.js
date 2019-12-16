@@ -13,7 +13,7 @@ import "./index.scss"
 
 const IndexPage = () => {
   const [selected, setSelected] = useState(null)
-  const transitionLength = .1
+  const transitionLength = 0.1
 
   const variants = {
     enter: {
@@ -21,7 +21,7 @@ const IndexPage = () => {
       opacity: 1,
       transition: {
         type: "spring",
-        damping: 20
+        damping: 20,
       },
     },
     exit: {
@@ -30,8 +30,7 @@ const IndexPage = () => {
       transition: {
         type: "spring",
         damping: 200,
-        mass: .1
-        
+        mass: 0.1,
       },
     },
   }
@@ -47,9 +46,9 @@ const IndexPage = () => {
               variants={variants}
               initial="exit"
               animate={
-                ['entering', 'entered'].includes(transitionStatus)
-                  ? 'enter'
-                  : 'exit'
+                ["entering", "entered"].includes(transitionStatus)
+                  ? "enter"
+                  : "exit"
               }
             >
               <div className="heading__text inline-block xl:-mt-6 lg:-mt-4 mt-16 xl:text-7xl lg:text-6xl sm:text-5xl text-4xl">
@@ -74,10 +73,10 @@ const IndexPage = () => {
                     <TransitionLink
                       to="/about"
                       exit={{
-                        length: 0.5
+                        length: 0.5,
                       }}
                       entry={{
-                        delay: 0.2
+                        delay: 0.2,
                       }}
                       onPointerEnter={() => setSelected(1)}
                       onPointerLeave={() => setSelected(null)}
@@ -86,12 +85,19 @@ const IndexPage = () => {
                     </TransitionLink>
                   </li>
                   <li className=" mt-4">
-                    <span
+                    <TransitionLink
+                      to="/contact"
+                      exit={{
+                        length: 0.5,
+                      }}
+                      entry={{
+                        delay: 0.2,
+                      }}
                       onPointerEnter={() => setSelected(2)}
                       onPointerLeave={() => setSelected(null)}
                     >
                       Contact
-                    </span>
+                    </TransitionLink>
                   </li>
                 </ul>
               </div>
