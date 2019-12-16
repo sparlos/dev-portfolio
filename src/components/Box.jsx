@@ -2,12 +2,18 @@ import React, {useState} from 'react'
 
 import { motion } from "framer-motion"
 
-const Box = ({ size, position, rotation, custom, selected }) => {
+const Box = ({ size, position, rotation, custom, path }) => {
+  console.log(path)
+
+  let randomPosition = Math.floor(Math.random() * 20)
+  randomPosition *= Math.floor(Math.random()*2) === 1 ? 1 : -1
+
   const boxVariants = {
     visible: i => ({
       opacity: 1,
       rotate: rotation,
       y: 0,
+      x: 0,
       transition: {
         type: 'spring',
         damping: 300,
@@ -15,32 +21,27 @@ const Box = ({ size, position, rotation, custom, selected }) => {
       }
     }),
     hidden: { opacity: 0, y: 200, rotate: 0 },
-    selected: {
-      opacity: 1, rotate: 0, backgroundColor: '#cbd5e0', transition: {
-        rotate: {
-          type: 'spring',
-          velocity: .5
-        }
+    about: {
+      opacity: 1,
+      y: randomPosition,
+      x: randomPosition,
+      rotate: rotation*8,
+      transition: {
+        type: 'spring',
+        mass: 5,
+        damping: 300
       }
-    },
-    deselected: {
-      opacity: 1, rotate: rotation, backgroundColor: '#edf2f7', transition: {
-        rotate: {
-          type: 'spring',
-          velocity: .5
-        }
-      }
-    },
+    }
+    
   }
 
-  const [clean, setClean] = useState(true)
-
-  if(clean && selected) setClean(false)
-
   const animation = () => {
-    if(clean) return 'visible'
-    if(!clean && selected) return 'selected'
-    if(!clean && !selected) return 'deselected'
+    switch(path) {
+      case '/about/':
+        return 'about'
+      default:
+        return 'visible'
+    }
   }
 
   return (

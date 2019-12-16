@@ -19,7 +19,8 @@ import FancyBox from "../components/FancyBox"
 import "./tailwind.css"
 import "./box.scss"
 
-const Layout = ({ children, selected }) => {
+const Layout = ({ children, selected, path }) => {
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -46,7 +47,7 @@ const Layout = ({ children, selected }) => {
       initial="hidden"
       animate="visible"
       variants={backgroundVariants}
-      className="relative lg:w-11/12 md:w-full bg-gray-100 h-screen mx-auto overflow-hidden"
+      className="relative lg:w-11/12 md:w-full bg-gray-100 h-screen mx-auto overflow-x-hidden"
       style={{
         height: '100vh',
         minHeight: 720,
@@ -60,7 +61,7 @@ const Layout = ({ children, selected }) => {
         position={1}
         rotation={45}
         custom={1}
-        selected={0 === selected}
+        path={path}
       />
 
       <Box
@@ -68,7 +69,7 @@ const Layout = ({ children, selected }) => {
         position={2}
         rotation={15}
         custom={2}
-        selected={1 === selected}
+        path={path}
       />
 
       <Box
@@ -76,7 +77,7 @@ const Layout = ({ children, selected }) => {
         position={3}
         rotation={30}
         custom={3}
-        selected={2 === selected}
+        path={path}
       />
     </motion.div>
   )
