@@ -27,7 +27,7 @@ const Box = ({ size, position, rotation, custom, path }) => {
       scale: 1,
       y: randomPosition,
       x: randomPosition,
-      rotate: rotation*8,
+      rotate: rotation*5,
       transition: {
         type: 'spring',
         mass: 5,

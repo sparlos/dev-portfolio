@@ -19,7 +19,7 @@ const contact = () => {
         type: "spring",
         damping: 200,
         mass: 0.3,
-        delayChildren: 0.3,
+        delayChildren: 0.4,
         staggerChildren: 0.05,
       },
     },

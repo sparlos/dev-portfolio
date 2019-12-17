@@ -11,14 +11,15 @@ const About = () => {
           className="xl:w-3/6 lg:w-4/6 w-5/6 lg:ml-56 font-sans xl:my-32 lg:my-20 my-32 pb-32 mx-auto"
           initial={{
             opacity: 0,
-            x: -200,
+            x: -100,
           }}
           animate={{
             opacity: 1,
             x: 0,
             transition: {
               type: "spring",
-              mass: 0.5,
+              mass: 1,
+              damping: 50
             },
           }}
         >
