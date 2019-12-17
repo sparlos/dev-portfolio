@@ -12,6 +12,7 @@
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-postcss": "^2.1.18",
     "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-sass": "^2.1.26",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-plugin-transition-link": "^1.17.5",
     "gatsby-plugin-web-font-loader": "^1.0.4",
@@ -19,10 +20,12 @@
     "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.7",
     "gsap": "^3.0.4",
+    "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1",
@@ -39,7 +42,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "develop:network": "gatsby develop -H 0.0.0.0"
   },
   "repository": {
     "type": "git",

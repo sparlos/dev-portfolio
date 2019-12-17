@@ -5,15 +5,27 @@ module.exports = {
     author: `@sparlos`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-transition-link`,
+      options: {
+        layout: require.resolve("./src/components/layout.js"),
+      },
+    },
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        data: `@import "${__dirname}/src/styles/styles";`,
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Raleway', 'Kanit']
-        }
-      }
+          families: ["Raleway:300,400,500,600,700"],
+        },
+      },
     },
     `gatsby-plugin-react-helmet`,
     {
