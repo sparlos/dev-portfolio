@@ -1,5 +1,6 @@
 .fancybox {
   $size: 40px;
+  z-index: -100;
 
   width: $size;
   height: $size;

@@ -48,6 +48,9 @@ const Layout = ({ children, selected, path }) => {
       animate="visible"
       variants={backgroundVariants}
       className="relative lg:w-11/12 md:w-full bg-gray-100 mx-auto overflow-x-hidden min-h-screen"
+      style={{
+        zIndex: 0
+      }}
     >
       { children }
       <FancyBox custom={2} />

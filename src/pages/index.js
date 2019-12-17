@@ -46,7 +46,7 @@ const IndexPage = () => {
               variants={variants}
               initial="exit"
               animate={
-                ["entering", "entered"].includes(transitionStatus)
+                ["entering", "entered", "POP"].includes(transitionStatus)
                   ? "enter"
                   : "exit"
               }

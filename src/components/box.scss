@@ -1,5 +1,6 @@
 .box {
   transition: right .3s, top .3s, bottom .3s, left .3s;
+  z-index: -100;
 
   &--1 {
     right: -30%;
@@ -27,6 +28,7 @@
     top: 350px;
 
     @include breakpoint(sm) {
+      top: auto;
       right: 15%;
       bottom: 175px;
     }
