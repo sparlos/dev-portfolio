@@ -8,7 +8,7 @@ const About = () => {
     <TransitionState>
       {({ transitionStatus }) => (
         <motion.div
-          className="md:w-3/6 w-5/6 lg:ml-56 font-sans lg:mt-40 mt-32 mx-auto"
+          className="xl:w-3/6 lg:w-4/6 w-5/6 lg:ml-56 font-sans xl:my-32 lg:my-20 my-32 pb-32 mx-auto"
           initial={{
             opacity: 0,
             x: -200,

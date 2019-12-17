@@ -11,6 +11,7 @@ const Box = ({ size, position, rotation, custom, path }) => {
   const boxVariants = {
     visible: i => ({
       opacity: 1,
+      scale: 1,
       rotate: rotation,
       y: 0,
       x: 0,
@@ -20,9 +21,10 @@ const Box = ({ size, position, rotation, custom, path }) => {
         delay: i * 0.1
       }
     }),
-    hidden: { opacity: 0, y: 200, rotate: 0 },
+    hidden: { opacity: 0, y: 200, rotate: 0, scale: 1 },
     about: {
       opacity: 1,
+      scale: 1,
       y: randomPosition,
       x: randomPosition,
       rotate: rotation*8,
@@ -33,12 +35,17 @@ const Box = ({ size, position, rotation, custom, path }) => {
       }
     },
     contact: {
-      opacity: 0,
-      y: 200,
+      opacity: 1,
+      y: position === 1 ? -75 : randomPosition,
+      x: position === 1 ? 100 : randomPosition,
+      scale: position === 1 ? 0.6  : 1,
+      rotate: rotation*5,
       transition: {
-        type: 'spring',
-        mass: 5,
-        damping: 300
+        default: {
+          type: 'spring',
+          mass: 1,
+          damping: 300
+        }
       }
     }
     
