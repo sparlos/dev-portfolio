@@ -54,11 +54,11 @@ const contact = () => {
     >
       <motion.h1
         variants={headingVariants}
-        className="sm:text-5xl text-4xl sm:text-left font-normal tracking-widest"
+        className="text-5xl sm:text-left font-normal tracking-widest"
       >
         Contact
       </motion.h1>
-      <div className="sm:w-full w-5/6 mx-auto bg-gray-200 sm:py-20 py-12 sm:mt-12 mt-6 rounded-lg flex flex-wrap justify-around items-center sm:text-6xl text-5xl sm:px-10 px-6">
+      <div className="sm:w-full w-5/6 mx-auto bg-gray-200 sm:py-20 py-12 sm:mt-12 mt-6 rounded-lg flex flex-wrap justify-around items-center text-6xl sm:px-10 px-6">
         <motion.div variants={iconVariants} className="sm:mb-0 mb-6 sm:flex-initial flex-50">
           <FaLinkedin className="mx-auto" />
           <p className="text-sm text-center mt-1 underline">LinkedIn</p>
