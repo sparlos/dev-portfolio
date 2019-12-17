@@ -210,6 +210,8 @@ module.exports = {
       auto: '1 1 auto',
       initial: '0 1 auto',
       none: 'none',
+      '100': '0 1 100%',
+      '50': '0 1 50%'
     },
     flexGrow: {
       '0': '0',

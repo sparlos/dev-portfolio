@@ -3,13 +3,16 @@ import React, {useState} from 'react'
 import { motion } from "framer-motion"
 
 const Box = ({ size, position, rotation, custom, path }) => {
-  console.log(path)
+
+  const boxInitialColor = '#edf2f7'
+  const boxHiddenColor = '#f7fafc'
 
   let randomPosition = Math.floor(Math.random() * 20)
   randomPosition *= Math.floor(Math.random()*2) === 1 ? 1 : -1
 
   const boxVariants = {
     visible: i => ({
+      backgroundColor: boxInitialColor,
       opacity: 1,
       scale: 1,
       rotate: rotation,
@@ -23,6 +26,7 @@ const Box = ({ size, position, rotation, custom, path }) => {
     }),
     hidden: { opacity: 0, y: 200, rotate: 0, scale: 1 },
     about: {
+      backgroundColor: boxInitialColor,
       opacity: 1,
       scale: 1,
       y: randomPosition,
@@ -35,10 +39,8 @@ const Box = ({ size, position, rotation, custom, path }) => {
       }
     },
     contact: {
+      backgroundColor: boxHiddenColor,
       opacity: 1,
-      y: position === 1 ? -75 : randomPosition,
-      x: position === 1 ? 100 : randomPosition,
-      scale: position === 1 ? 0.6  : 1,
       rotate: rotation*5,
       transition: {
         default: {

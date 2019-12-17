@@ -19,7 +19,7 @@ const contact = () => {
         type: "spring",
         damping: 200,
         mass: 0.3,
-        delayChildren: 0.4,
+        delayChildren: 0.3,
         staggerChildren: 0.05,
       },
     },
@@ -47,36 +47,36 @@ const contact = () => {
 
   return (
     <motion.div
-      className="relative xl:w-4/6 w-5/6 font-sans my-32 mx-auto"
+      className="relative xl:w-4/6 w-5/6 font-sans my-32 mx-auto text-gray-900"
       variants={containerVariants}
       initial="hidden"
       animate="show"
     >
       <motion.h1
         variants={headingVariants}
-        className="text-5xl font-normal tracking-widest"
+        className="sm:text-5xl text-4xl sm:text-left font-normal tracking-widest"
       >
         Contact
       </motion.h1>
-      <div className="w-full bg-gray-200 py-20 mt-12 rounded-lg flex flex-wrap justify-around items-center text-6xl px-10">
-        <motion.div variants={iconVariants}>
-          <FaLinkedin />
+      <div className="sm:w-full w-5/6 mx-auto bg-gray-200 sm:py-20 py-12 sm:mt-12 mt-6 rounded-lg flex flex-wrap justify-around items-center sm:text-6xl text-5xl sm:px-10 px-6">
+        <motion.div variants={iconVariants} className="sm:mb-0 mb-6 sm:flex-initial flex-50">
+          <FaLinkedin className="mx-auto" />
           <p className="text-sm text-center mt-1 underline">LinkedIn</p>
         </motion.div>
-        <motion.div variants={iconVariants}>
-          <FaTwitterSquare />
+        <motion.div variants={iconVariants} className="sm:mb-0 mb-6 sm:flex-initial flex-50">
+          <FaTwitterSquare className="mx-auto" />
           <p className="text-sm text-center mt-1 underline">Twitter</p>
         </motion.div>
-        <motion.div variants={iconVariants}>
-          <FaEnvelopeSquare />
+        <motion.div variants={iconVariants} className="order-first sm:order-none sm:mb-0 mb-6 sm:flex-initial flex-100">
+          <FaEnvelopeSquare className="mx-auto" />
           <p className="text-sm text-center mt-1 underline">Email</p>
         </motion.div>
-        <motion.div variants={iconVariants}>
-          <FaGithubSquare />
+        <motion.div variants={iconVariants} className="sm:flex-initial flex-50">
+          <FaGithubSquare className="mx-auto" />
           <p className="text-sm text-center mt-1 underline">GitHub</p>
         </motion.div>
-        <motion.div variants={iconVariants}>
-          <FaCodepen />
+        <motion.div variants={iconVariants} className="sm:flex-initial flex-50">
+          <FaCodepen className="mx-auto" />
           <p className="text-sm text-center mt-1 underline">CodePen</p>
         </motion.div>
       </div>
