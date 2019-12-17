@@ -67,8 +67,7 @@ const Box = ({ size, position, rotation, custom, path }) => {
   return (
     <motion.div className={`bg-gray-200 w-${size} h-${size} absolute box box--${position}`}
       style={{
-        transform: `rotate(${rotation}deg)`,
-        zIndex: -100
+        transform: `rotate(${rotation}deg)`
       }}
       initial="hidden"
       animate={animation()}

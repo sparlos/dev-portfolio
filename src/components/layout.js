@@ -47,12 +47,7 @@ const Layout = ({ children, selected, path }) => {
       initial="hidden"
       animate="visible"
       variants={backgroundVariants}
-      className="relative lg:w-11/12 md:w-full bg-gray-100 h-screen mx-auto overflow-x-hidden"
-      style={{
-        height: '100vh',
-        minHeight: 720,
-        zIndex: 0,
-      }}
+      className="relative lg:w-11/12 md:w-full bg-gray-100 mx-auto overflow-x-hidden min-h-screen"
     >
       { children }
       <FancyBox custom={2} />

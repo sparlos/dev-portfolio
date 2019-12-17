@@ -14,7 +14,7 @@
 
   &--2 {
     left: -10%;
-    bottom: 50px;
+    top: 500px;
 
     @include breakpoint(sm) {
       left: 15%;
@@ -23,7 +23,8 @@
   }
 
   &--3 {
-    right: 0;
+    right: 0px;
+    top: 350px;
 
     @include breakpoint(sm) {
       right: 15%;
