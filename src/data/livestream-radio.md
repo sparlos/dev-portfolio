@@ -1,6 +1,6 @@
 ---
 title: "Livestream Radio"
-blurb: "A website for categorizing YouTube livestreams. Written in Vue."
+blurb: "A website for categorizing YouTube livestreams. Written primarily in Vue."
 image: ../images/livestream-radio.png
 tags: Vue,Vuetify,SCSS,GitHub,Material Design,YouTube iframe API
 ---
