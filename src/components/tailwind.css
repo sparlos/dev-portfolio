@@ -3,3 +3,11 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.link {
+  @apply underline text-teal-500;
+}
+
+.transition-color {
+  transition: .1s color;
+}

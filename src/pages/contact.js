@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 
 import TransitionLink, { TransitionState } from "gatsby-plugin-transition-link"
 
+import Icon from "../components/Icon"
+
 import {
   FaLinkedin,
   FaTwitterSquare,
@@ -86,47 +88,50 @@ const contact = () => {
               Contact
             </motion.h1>
             <div className="w-full mx-auto bg-gray-200 sm:py-20 py-12 sm:mt-12 mt-6 rounded-lg flex flex-wrap justify-around items-center text-6xl sm:px-10 px-6">
-              <motion.div
-                variants={iconVariants}
-                className="sm:mb-0 mb-6 sm:flex-initial flex-50"
+              <Icon
+                href="https://www.linkedin.com/in/stephen-sparling-033643171/"
+                linkTitle="LinkedIn"
+                customClasses="sm:mb-0 mb-6 flex-50"
               >
                 <FaLinkedin className="mx-auto" />
-                <p className="text-sm text-center mt-1 underline">LinkedIn</p>
-              </motion.div>
-              <motion.div
-                variants={iconVariants}
-                className="sm:mb-0 mb-6 sm:flex-initial flex-50"
+              </Icon>
+              
+              <Icon
+                href="https://twitter.com/SparlosCode"
+                linkTitle="Twitter"
+                customClasses="sm:mb-0 mb-6 flex-50"
               >
                 <FaTwitterSquare className="mx-auto" />
-                <p className="text-sm text-center mt-1 underline">Twitter</p>
-              </motion.div>
-              <motion.div
-                variants={iconVariants}
-                className="order-first sm:order-none sm:mb-0 mb-6 sm:flex-initial flex-100"
+              </Icon>
+
+              <Icon
+                href="mailto:sparlingcreations@gmail.com"
+                linkTitle="Email"
+                customClasses="order-first sm:order-none sm:mb-0 mb-6 flex-100"
               >
                 <FaEnvelopeSquare className="mx-auto" />
-                <p className="text-sm text-center mt-1 underline">Email</p>
-              </motion.div>
-              <motion.div
-                variants={iconVariants}
-                className="sm:flex-initial flex-50"
+              </Icon>
+
+              <Icon
+                href="https://github.com/sparlos"
+                linkTitle="GitHub"
+                customClasses="flex-50"
               >
                 <FaGithubSquare className="mx-auto" />
-                <p className="text-sm text-center mt-1 underline">GitHub</p>
-              </motion.div>
-              <motion.div
-                variants={iconVariants}
-                className="sm:flex-initial flex-50"
+              </Icon>
+
+              <Icon
+                href="https://codepen.io/sparlos"
+                linkTitle="CodePen"
+                customClasses="flex-50"
               >
-                <FaCodepen className="mx-auto" />
-                <p className="text-sm text-center mt-1 underline">CodePen</p>
-              </motion.div>
+                <FaCodepen />
+              </Icon>
+
             </div>
-            <motion.div
-              variants={iconVariants}
-              className="mt-8 underline"
-            >
+            <motion.div variants={iconVariants} className="mt-8 underline">
               <TransitionLink
+                className="link"
                 to="/"
                 exit={{
                   length: 0.5,

@@ -57,7 +57,7 @@ const About = () => {
               <b>
                 React, jQuery, SQL, PHP, Node, SASS & SCSS, Bootstrap, VS Code,
                 Figma, WordPress, Python, Vue, MongoDB, and GraphQL.&nbsp;
-                <a href="#" className="underline">
+                <a href="#" className="link">
                   You can find my full CV here.
                 </a>
               </b>
@@ -85,7 +85,7 @@ const About = () => {
               full-time; I'm open to either local (Toronto area) or remote
               work.&nbsp;
               <TransitionLink
-                className="font-bold underline"
+                className="font-bold link"
                 to="/contact/"
                 exit={{
                   length: 0.5,
@@ -99,7 +99,7 @@ const About = () => {
             </p>
             <p className="mt-10">
               <TransitionLink
-                className="underline"
+                className="link"
                 to="/"
                 exit={{
                   length: 0.5,
