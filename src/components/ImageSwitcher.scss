@@ -1,0 +1,12 @@
+.image-switcher {
+  position: fixed;
+  width: 40%;
+  right: 7%;
+  top: 220px;
+
+  &__image {
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+}
