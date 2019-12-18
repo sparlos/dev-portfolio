@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import { graphql } from "gatsby"
 
@@ -6,10 +6,14 @@ import ProjectSnippet from "../components/ProjectSnippet"
 import ImageSwitcher from "../components/ImageSwitcher"
 
 const Projects = ({ data }) => {
-  console.log(data)
+  const [activeImage, setActiveImage] = useState(null)
+
+  const handleSetActiveImage = (imageIndex) => {
+    setActiveImage(imageIndex)
+  }
 
   const projects = () =>
-    data.allMarkdownRemark.edges.map(({ node }) => {
+    data.allMarkdownRemark.edges.map(({ node }, i) => {
       const id = node.id
       const { title, blurb, image } = node.frontmatter
 
@@ -18,12 +22,18 @@ const Projects = ({ data }) => {
       return (
         <ProjectSnippet
           key={id}
+          imageIndex={i}
           title={title}
           blurb={blurb}
           imageFluid={imageFluid}
+          setActiveImage={handleSetActiveImage}
         ></ProjectSnippet>
       )
     })
+
+    const images = () => 
+      data.allMarkdownRemark.edges.map(({node}) => node.frontmatter.image.childImageSharp.fluid)
+    
 
   return (
     <div className="font-sans my-32 flex">
@@ -33,8 +43,11 @@ const Projects = ({ data }) => {
         </h1>
         <div className="mt-6">{projects()}</div>
       </div>
-      <div>
-        <ImageSwitcher />
+      <div className="flex-1 px-20 justify-center lg:block hidden mt-24">
+        <ImageSwitcher 
+          activeImage={activeImage}
+          images={images()}
+        />
       </div>
     </div>
   )
