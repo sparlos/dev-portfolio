@@ -125,7 +125,7 @@ const contact = () => {
                 linkTitle="CodePen"
                 customClasses="flex-50"
               >
-                <FaCodepen />
+                <FaCodepen className="mx-auto" />
               </Icon>
 
             </div>
