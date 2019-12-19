@@ -2,11 +2,13 @@ import React from 'react'
 
 import Img from 'gatsby-image'
 
-const ProjectSnippet = ({ setActiveImage, imageIndex, title, blurb, imageFluid }) => {
+const ProjectSnippet = ({ setActiveImage, imageIndex, title, blurb, imageFluid, slug }) => {
+
+  console.log(slug)
 
   return (
     <a
-      href="#"
+      href={slug}
       className="relative block mb-6 lg:text-gray-600 text-gray-900 hover:text-gray-900 transition-color"
       onMouseEnter={() => { setActiveImage(imageIndex) }}
     >
