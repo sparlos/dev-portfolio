@@ -50,11 +50,13 @@ const Projects = ({ data }) => {
     data.allMarkdownRemark.edges.map(({ node }, i) => {
       const id = node.id
       const { title, blurb, image } = node.frontmatter
+      const slug = node.fields.slug
 
       const imageFluid = image.childImageSharp.fluid
 
       return (
         <ProjectSnippet
+          slug={slug}
           key={id}
           imageIndex={i}
           title={title}
@@ -84,7 +86,7 @@ const Projects = ({ data }) => {
                 : "exit"
             }
           >
-            <h1 className="text-5xl font-normal tracking-widest text-bold">
+            <h1 className="heading-main">
               Projects
             </h1>
             <div className="mt-6">{projects()}</div>
@@ -102,6 +104,9 @@ export const query = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             blurb

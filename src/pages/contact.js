@@ -83,7 +83,7 @@ const contact = () => {
           >
             <motion.h1
               variants={headingVariants}
-              className="text-5xl sm:text-left font-normal tracking-widest"
+              className="heading-main sm:text-left"
             >
               Contact
             </motion.h1>

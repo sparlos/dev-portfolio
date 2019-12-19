@@ -11,3 +11,7 @@
 .transition-color {
   transition: .1s color;
 }
+
+.heading-main {
+  @apply text-5xl font-normal tracking-widest;
+}
