@@ -22,6 +22,7 @@ import "./tailwind.css"
 import "./box.scss"
 
 const Layout = ({ children, selected, path }) => {
+
   const [navbar, setNavbar] = useState(false)
   const handleSetNavbar = () => setNavbar(!navbar)
 
@@ -72,7 +73,19 @@ const Layout = ({ children, selected, path }) => {
           </motion.div>
         )}
       </AnimatePresence>
-      <NavbarToggle navbar={navbar} setNavbar={handleSetNavbar} />
+      <AnimatePresence>
+        {path !== '/' && (
+          <motion.div
+            key="navbar"
+            initial={{ opacity: 0, y: -10}}
+            animate={{ opacity: 1, y: 0}}
+            exit={{ opacity: 0, y: -10 }}
+            transition={transition}
+          >
+            <NavbarToggle navbar={navbar} setNavbar={handleSetNavbar} />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="relative z-0">{children}</div>
       <FancyBox custom={2} />
       <Box size={56} position={1} rotation={45} custom={1} path={path} />
