@@ -86,7 +86,7 @@ const Projects = ({ data }) => {
                 : "exit"
             }
           >
-            <h1 className="text-5xl font-normal tracking-widest text-bold">
+            <h1 className="heading-main">
               Projects
             </h1>
             <div className="mt-6">{projects()}</div>

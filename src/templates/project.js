@@ -9,7 +9,7 @@ const Project = ({ data }) => {
 
   return (
     <div>
-      <h1>{title}</h1>
+      <h1 className="heading-main">{title}</h1>
       <Img className="w-3/6" fluid={image.childImageSharp.fluid} />
       <div>{tags}</div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />

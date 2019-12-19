@@ -48,7 +48,7 @@ const About = () => {
               : "exit"
           }
         >
-          <h1 className="text-5xl font-normal tracking-widest">About</h1>
+          <h1 className="heading-main">About</h1>
           <div className="mt-12 md:leading-relaxed">
             <p className="mt-6">
               I'm Stephen, a driven young professional looking to enter the
