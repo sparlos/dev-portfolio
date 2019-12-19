@@ -21,19 +21,10 @@ import Navbar from "./Navbar"
 import "./tailwind.css"
 import "./box.scss"
 
-const Layout = ({ children, selected, path }) => {
+const Layout = ({ children, path }) => {
+
   const [navbar, setNavbar] = useState(false)
   const handleSetNavbar = () => setNavbar(!navbar)
-
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   const backgroundVariants = {
     visible: {
@@ -66,7 +57,7 @@ const Layout = ({ children, selected, path }) => {
             animate={{ opacity: 1, scale: 1, borderRadius: 0 }}
             exit={{ opacity: 0 }}
             transition={transition}
-            className="absolute h-full w-full z-40 bg-gray-900"
+            className="fixed h-screen w-screen z-40 bg-gray-900"
           >
             <Navbar toggleNavbar={handleSetNavbar} />
           </motion.div>
@@ -74,15 +65,7 @@ const Layout = ({ children, selected, path }) => {
       </AnimatePresence>
       <AnimatePresence>
         {path !== "/" && (
-          <motion.div
-            key="navbar"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={transition}
-          >
-            <NavbarToggle navbar={navbar} setNavbar={handleSetNavbar} />
-          </motion.div>
+          <NavbarToggle navbar={navbar} setNavbar={handleSetNavbar} transition={transition} />
         )}
       </AnimatePresence>
       <div className="relative z-0">{children}</div>

@@ -30,32 +30,40 @@ const Bar = (props) => {
       initial="closed"
       animate={props.navbar ? 'open' : 'closed'}
       className="absolute w-full h-1 bg-gray-900 rounded"
+      style={{
+        height: '3px',
+        ...props.style
+      }}
     />
   )
 }
 
-const NavbarToggle = ({ navbar, setNavbar }) => {
+const NavbarToggle = ({ navbar, setNavbar, transition }) => {
 
   return (
     <motion.div
+      key="navbar"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={transition}
       onClick={setNavbar}
-      className={`absolute w-16 h-12 z-50 cursor-pointer right-0 top-0 mt-20 mr-40 rounded-full`}
-      initial={{
-        rotate: 0
-      }}
+      className={`fixed md:w-16 w-12 md:h-12 h-10 z-50 cursor-pointer right-0 lg:mt-20 mt-16 rounded-full
+      lg:mr-40 md:mr-24 sm:mr-16 mr-12`}
+
     >
       <Bar
         navbar={navbar}
         variants={{
           open: {
             rotate: -45,
-            y: 20,
+            y: 15,
             backgroundColor: gray100
           }
         }}
       />
       <Bar
-        style={{ top: 20, zIndex: -1 }}
+        style={{ top: 15, zIndex: -1 }}
         navbar={navbar}
         variants={{
           open: {
@@ -63,12 +71,12 @@ const NavbarToggle = ({ navbar, setNavbar }) => {
         }}
       />
       <Bar
-        style={{ top: 40 }}
+        style={{ top: 30 }}
         navbar={navbar}
         variants={{
           open: {
             rotate: 45,
-            y: -20,
+            y: -15,
             backgroundColor: gray100
           }
         }}
