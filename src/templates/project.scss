@@ -1,0 +1,11 @@
+.project-text {
+  & p {
+    margin-bottom: 1.4rem;
+    line-height: 1.65rem;
+  }
+
+  & a {
+    text-decoration: underline;
+    color: #38B2AC;
+  }
+}
