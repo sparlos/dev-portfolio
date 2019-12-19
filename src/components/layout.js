@@ -22,7 +22,6 @@ import "./tailwind.css"
 import "./box.scss"
 
 const Layout = ({ children, path }) => {
-
   const [navbar, setNavbar] = useState(false)
   const handleSetNavbar = () => setNavbar(!navbar)
 
@@ -40,15 +39,7 @@ const Layout = ({ children, path }) => {
   }
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={backgroundVariants}
-      className="relative lg:w-11/12 md:w-full bg-gray-100 mx-auto overflow-x-hidden min-h-screen"
-      style={{
-        zIndex: 0,
-      }}
-    >
+    <div>
       <AnimatePresence>
         {navbar && (
           <motion.div
@@ -57,7 +48,7 @@ const Layout = ({ children, path }) => {
             animate={{ opacity: 1, scale: 1, borderRadius: 0 }}
             exit={{ opacity: 0 }}
             transition={transition}
-            className="fixed h-screen w-screen z-40 bg-gray-900"
+            className="fixed h-screen w-full z-40 bg-gray-900"
           >
             <Navbar toggleNavbar={handleSetNavbar} />
           </motion.div>
@@ -65,17 +56,31 @@ const Layout = ({ children, path }) => {
       </AnimatePresence>
       <AnimatePresence>
         {path !== "/" && (
-          <NavbarToggle navbar={navbar} setNavbar={handleSetNavbar} transition={transition} />
+          <NavbarToggle
+            navbar={navbar}
+            setNavbar={handleSetNavbar}
+            transition={transition}
+          />
         )}
       </AnimatePresence>
-      <div className="relative z-0">{children}</div>
-      <FancyBox custom={2} />
-      <Box size={56} position={1} rotation={45} custom={1} path={path} />
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={backgroundVariants}
+        className="relative lg:w-11/12 md:w-full bg-gray-100 mx-auto overflow-x-hidden min-h-screen"
+        style={{
+          zIndex: 0,
+        }}
+      >
+        <div className="relative z-0">{children}</div>
+        <FancyBox custom={2} />
+        <Box size={56} position={1} rotation={45} custom={1} path={path} />
 
-      <Box size={40} position={2} rotation={15} custom={2} path={path} />
+        <Box size={40} position={2} rotation={15} custom={2} path={path} />
 
-      <Box size={32} position={3} rotation={30} custom={3} path={path} />
-    </motion.div>
+        <Box size={32} position={3} rotation={30} custom={3} path={path} />
+      </motion.div>
+    </div>
   )
 }
 

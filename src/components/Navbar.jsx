@@ -18,7 +18,7 @@ const Navbar = ({ toggleNavbar }) => {
   const items = ['projects', 'about', 'contact']
 
   return (
-    <motion.div className="text-gray-100 md:text-5xl text-3xl font-sans underline md:mr-24 mr-16">
+    <motion.div className="text-gray-100 md:text-5xl text-3xl font-sans underline lg:mr-40 md:mr-24 mr-16">
       <motion.ul
         className="text-right md:mt-56 mt-48"
         variants={ulVariants}
