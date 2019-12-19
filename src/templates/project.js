@@ -1,14 +1,16 @@
 import React from "react"
 
 import { graphql } from "gatsby"
+import Img from 'gatsby-image'
 
 const Project = ({ data }) => {
   const post = data.markdownRemark
-  const { title, tags } = post.frontmatter
+  const { title, image, tags } = post.frontmatter
 
   return (
     <div>
       <h1>{title}</h1>
+      <Img className="w-3/6" fluid={image.childImageSharp.fluid} />
       <div>{tags}</div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
@@ -24,6 +26,13 @@ export const query = graphql`
       frontmatter {
         title
         tags
+        image {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

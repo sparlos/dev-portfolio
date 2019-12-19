@@ -4,8 +4,6 @@ import Img from 'gatsby-image'
 
 const ProjectSnippet = ({ setActiveImage, imageIndex, title, blurb, imageFluid, slug }) => {
 
-  console.log(slug)
-
   return (
     <a
       href={slug}
