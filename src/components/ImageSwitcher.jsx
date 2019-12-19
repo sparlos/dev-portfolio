@@ -3,18 +3,17 @@ import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import './ImageSwitcher.scss'
 
-const ImageSwitcher = (props) => {
-  console.log(props.images)
+const ImageSwitcher = ({ activeImage, images }) => {
 
   return (
     <div>
-      {props.activeImage !== null &&
+      {activeImage !== null &&
         <div className="image-switcher lg:block hidden">
           <AnimatePresence>
             <motion.img
               className="image-switcher__image"
-              key={props.activeImage}
-              src={props.images[props.activeImage].src}
+              key={activeImage}
+              src={images[activeImage].src}
               initial={{ y: 100, opacity: 0 }}
               animate={{
                 y: 0, opacity: 1, zIndex: 1

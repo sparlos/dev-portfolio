@@ -75,7 +75,7 @@ const Projects = ({ data }) => {
       {({ transitionStatus }) => (
         <div className="font-sans my-32 flex text-gray-900">
           <motion.div
-            className="lg:pl-40 w-3/6"
+            className="lg:pl-40 lg:mx-0 mx-auto lg:w-3/6 w-5/6"
             variants={variants}
             initial="hidden"
             animate={
