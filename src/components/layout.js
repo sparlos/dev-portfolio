@@ -22,7 +22,6 @@ import "./tailwind.css"
 import "./box.scss"
 
 const Layout = ({ children, selected, path }) => {
-
   const [navbar, setNavbar] = useState(false)
   const handleSetNavbar = () => setNavbar(!navbar)
 
@@ -38,7 +37,7 @@ const Layout = ({ children, selected, path }) => {
 
   const backgroundVariants = {
     visible: {
-      opacity: 1
+      opacity: 1,
     },
     hidden: { opacity: 0 },
   }
@@ -46,7 +45,7 @@ const Layout = ({ children, selected, path }) => {
   const transition = {
     type: "spring",
     damping: 200,
-    mass: .5,
+    mass: 0.5,
   }
 
   return (
@@ -63,22 +62,22 @@ const Layout = ({ children, selected, path }) => {
         {navbar && (
           <motion.div
             key="navbar"
-            initial={{ opacity: 0, scale: 0, borderRadius: '20%' }}
+            initial={{ opacity: 0, scale: 0, borderRadius: "20%" }}
             animate={{ opacity: 1, scale: 1, borderRadius: 0 }}
             exit={{ opacity: 0 }}
             transition={transition}
             className="absolute h-full w-full z-40 bg-gray-900"
           >
-            <Navbar />
+            <Navbar toggleNavbar={handleSetNavbar} />
           </motion.div>
         )}
       </AnimatePresence>
       <AnimatePresence>
-        {path !== '/' && (
+        {path !== "/" && (
           <motion.div
             key="navbar"
-            initial={{ opacity: 0, y: -10}}
-            animate={{ opacity: 1, y: 0}}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={transition}
           >

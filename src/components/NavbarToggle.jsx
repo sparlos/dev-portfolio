@@ -43,15 +43,6 @@ const NavbarToggle = ({ navbar, setNavbar }) => {
       initial={{
         rotate: 0
       }}
-    // animate={
-    //   navbar
-    //     ? {
-    //       rotate: 180
-    //     }
-    //     : {
-    //       rotate: 0
-    //     }
-    // }
     >
       <Bar
         navbar={navbar}

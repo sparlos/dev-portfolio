@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 import NavbarItem from './NavbarItem'
 
-const Navbar = () => {
+const Navbar = ({ toggleNavbar }) => {
 
   const ulVariants = {
     open: {
@@ -15,7 +15,7 @@ const Navbar = () => {
     }
   }
 
-  const items = ['Projects', 'About', 'Contact']
+  const items = ['projects', 'about', 'contact']
 
   return (
     <motion.div className="text-gray-100 text-5xl font-sans underline mr-40">
@@ -26,7 +26,7 @@ const Navbar = () => {
         animate="open"
       >
         {items.map((item, i) =>
-          <NavbarItem key={i} custom={i} label={item} />  
+          <NavbarItem key={i} custom={i} label={item} toggleNavbar={toggleNavbar} />
         )}
       </motion.ul>
     </motion.div>
