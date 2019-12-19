@@ -37,10 +37,7 @@ const Layout = ({ children, selected, path }) => {
 
   const backgroundVariants = {
     visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 1,
-      },
+      opacity: 1
     },
     hidden: { opacity: 0 },
   }
@@ -48,7 +45,7 @@ const Layout = ({ children, selected, path }) => {
   const transition = {
     type: "spring",
     damping: 200,
-    mass: .2,
+    mass: .5,
   }
 
   return (
@@ -67,7 +64,7 @@ const Layout = ({ children, selected, path }) => {
             key="navbar"
             initial={{ opacity: 0, scale: 0, borderRadius: '20%' }}
             animate={{ opacity: 1, scale: 1, borderRadius: 0 }}
-            exit={{ opacity: 0, scale: 0, borderRadius: '20%' }}
+            exit={{ opacity: 0 }}
             transition={transition}
             className="absolute h-full w-full z-40 bg-gray-900"
           >

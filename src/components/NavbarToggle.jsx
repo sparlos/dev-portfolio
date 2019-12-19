@@ -39,7 +39,7 @@ const NavbarToggle = ({ navbar, setNavbar }) => {
   return (
     <motion.div
       onClick={setNavbar}
-      className={`absolute w-16 h-12 z-50 cursor-pointer right-0 top-0 mt-20 mr-24 rounded-full`}
+      className={`absolute w-16 h-12 z-50 cursor-pointer right-0 top-0 mt-20 mr-40 rounded-full`}
       initial={{
         rotate: 0
       }}
