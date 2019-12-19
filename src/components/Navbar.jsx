@@ -1,9 +1,11 @@
 import React from 'react'
 
+import { motion } from 'framer-motion'
+
 const Navbar = () => {
   return (
-    <div className="absolute h-full w-full z-40 bg-gray-900">
-      navbar!!!
+    <div className="">
+
     </div>
   )
 }

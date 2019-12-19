@@ -9,7 +9,7 @@ const Bar = (props) => {
   const transition = {
     type: 'spring',
     damping: 200,
-    mass: 1
+    mass: .2
   }
 
   return (

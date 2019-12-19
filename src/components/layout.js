@@ -45,6 +45,12 @@ const Layout = ({ children, selected, path }) => {
     hidden: { opacity: 0 },
   }
 
+  const transition = {
+    type: "spring",
+    damping: 200,
+    mass: .2,
+  }
+
   return (
     <motion.div
       initial="hidden"
@@ -59,16 +65,18 @@ const Layout = ({ children, selected, path }) => {
         {navbar && (
           <motion.div
             key="navbar"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, scale: 0, borderRadius: '20%' }}
+            animate={{ opacity: 1, scale: 1, borderRadius: 0 }}
+            exit={{ opacity: 0, scale: 0, borderRadius: '20%' }}
+            transition={transition}
+            className="absolute h-full w-full z-40 bg-gray-900"
           >
             <Navbar />
           </motion.div>
         )}
       </AnimatePresence>
       <NavbarToggle navbar={navbar} setNavbar={handleSetNavbar} />
-      {children}
+      <div className="relative z-0">{children}</div>
       <FancyBox custom={2} />
       <Box size={56} position={1} rotation={45} custom={1} path={path} />
 
