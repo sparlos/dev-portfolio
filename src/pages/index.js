@@ -62,12 +62,19 @@ const IndexPage = () => {
                 </div>
                 <ul className="nav font-medium sm:text-right text-center sm:mr-8 mt-8 sm:text-2xl text-xl underline">
                   <li className="">
-                    <span
+                  <TransitionLink
+                      to="/projects"
+                      exit={{
+                        length: 0.5,
+                      }}
+                      entry={{
+                        delay: 0.2,
+                      }}
                       onPointerEnter={() => setSelected(0)}
                       onPointerLeave={() => setSelected(null)}
                     >
                       Projects
-                    </span>
+                    </TransitionLink>
                   </li>
                   <li className=" mt-4">
                     <TransitionLink
