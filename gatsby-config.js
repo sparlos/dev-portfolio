@@ -47,13 +47,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Stephen Sparling | Fullstack Dev`,
+        short_name: `Stephen Sparling`,
         start_url: `/`,
         background_color: `#1A202C`,
         theme_color: `#1A202C`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     }
   ],
