@@ -5,79 +5,82 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 import Header from "./header"
 
 import Box from "../components/Box"
 import FancyBox from "../components/FancyBox"
+import NavbarToggle from "../components/NavbarToggle"
+import Navbar from "./Navbar"
 
 import "./tailwind.css"
 import "./box.scss"
 
-const Layout = ({ children, selected, path }) => {
-
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children, path }) => {
+  const [navbar, setNavbar] = useState(false)
+  const handleSetNavbar = () => setNavbar(!navbar)
 
   const backgroundVariants = {
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 1,
-      },
     },
     hidden: { opacity: 0 },
   }
 
+  const transition = {
+    type: "spring",
+    damping: 200,
+    mass: 0.5,
+  }
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={backgroundVariants}
-      className="relative lg:w-11/12 md:w-full bg-gray-100 mx-auto overflow-x-hidden min-h-screen"
-      style={{
-        zIndex: 0
-      }}
-    >
-      { children }
-      <FancyBox custom={2} />
-      <Box
-        size={56}
-        position={1}
-        rotation={45}
-        custom={1}
-        path={path}
-      />
+    <div>
+      <AnimatePresence>
+        {navbar && (
+          <motion.div
+            key="navbar"
+            initial={{ opacity: 0, scale: 0, borderRadius: "20%" }}
+            animate={{ opacity: 1, scale: 1, borderRadius: 0 }}
+            exit={{ opacity: 0 }}
+            transition={transition}
+            className="fixed h-screen w-full z-40 bg-gray-900"
+          >
+            <Navbar toggleNavbar={handleSetNavbar} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {path !== "/" && (
+          <NavbarToggle
+            navbar={navbar}
+            setNavbar={handleSetNavbar}
+            transition={transition}
+          />
+        )}
+      </AnimatePresence>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={backgroundVariants}
+        className="relative lg:w-11/12 md:w-full bg-gray-100 mx-auto overflow-x-hidden min-h-screen"
+        style={{
+          zIndex: 0,
+        }}
+      >
+        <div className="relative z-0">{children}</div>
+        <FancyBox custom={2} />
+        <Box size={56} position={1} rotation={45} custom={1} path={path} />
 
-      <Box
-        size={40}
-        position={2}
-        rotation={15}
-        custom={2}
-        path={path}
-      />
+        <Box size={40} position={2} rotation={15} custom={2} path={path} />
 
-      <Box
-        size={32}
-        position={3}
-        rotation={30}
-        custom={3}
-        path={path}
-      />
-    </motion.div>
+        <Box size={32} position={3} rotation={30} custom={3} path={path} />
+      </motion.div>
+    </div>
   )
 }
 

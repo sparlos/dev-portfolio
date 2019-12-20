@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { motion } from "framer-motion"
 
 import TransitionLink, { TransitionState } from "gatsby-plugin-transition-link"
+import SEO from '../components/seo'
 
 import ProjectSnippet from "../components/ProjectSnippet"
 import ImageSwitcher from "../components/ImageSwitcher"
@@ -76,6 +77,7 @@ const Projects = ({ data }) => {
     <TransitionState>
       {({ transitionStatus }) => (
         <div className="font-sans my-32 flex text-gray-900">
+          <SEO title="Projects" />
           <motion.div
             className="lg:pl-40 lg:mx-0 mx-auto lg:w-3/6 w-5/6"
             variants={variants}
