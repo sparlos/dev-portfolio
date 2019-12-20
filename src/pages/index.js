@@ -12,8 +12,6 @@ import { motion } from "framer-motion"
 import "./index.scss"
 
 const IndexPage = () => {
-  const [selected, setSelected] = useState(null)
-  const transitionLength = 0.1
 
   const variants = {
     enter: {
@@ -39,7 +37,7 @@ const IndexPage = () => {
     <div>
       <SEO title="Home" />
       <TransitionState>
-        {({ transitionStatus, exit, enter }) => {
+        {({ transitionStatus }) => {
           return (
             <motion.div
               className="heading w-full text-center relative mx-auto font-sans text-gray-900 h-screen"
@@ -70,8 +68,6 @@ const IndexPage = () => {
                       entry={{
                         delay: 0.2,
                       }}
-                      onPointerEnter={() => setSelected(0)}
-                      onPointerLeave={() => setSelected(null)}
                     >
                       Projects
                     </TransitionLink>
@@ -85,8 +81,6 @@ const IndexPage = () => {
                       entry={{
                         delay: 0.2,
                       }}
-                      onPointerEnter={() => setSelected(1)}
-                      onPointerLeave={() => setSelected(null)}
                     >
                       About
                     </TransitionLink>
@@ -100,8 +94,6 @@ const IndexPage = () => {
                       entry={{
                         delay: 0.2,
                       }}
-                      onPointerEnter={() => setSelected(2)}
-                      onPointerLeave={() => setSelected(null)}
                     >
                       Contact
                     </TransitionLink>

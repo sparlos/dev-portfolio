@@ -7,11 +7,8 @@
 
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import { motion, AnimatePresence } from "framer-motion"
-
-import Header from "./header"
 
 import Box from "../components/Box"
 import FancyBox from "../components/FancyBox"

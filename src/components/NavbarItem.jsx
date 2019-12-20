@@ -31,7 +31,7 @@ const NavbarItem = ({ custom, label, toggleNavbar }) => {
       custom={custom}
     >
       <TransitionLink
-        to={`/${label}`}
+        to={label !== 'home' ? `/${label}` : '/'}
         exit={{
           length: 0.5,
         }}
