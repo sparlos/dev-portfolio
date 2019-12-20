@@ -11,6 +11,7 @@ const ProjectSnippet = ({
   blurb,
   imageFluid,
   slug,
+  maintech,
 }) => {
   const variants = {
     show: i => ({
@@ -31,7 +32,7 @@ const ProjectSnippet = ({
 
   return (
     <TransitionLinkDefault
-      className='relative block mb-6 lg:text-gray-600 text-gray-900 hover:text-gray-900 transition-color'
+      className='relative block mb-8 lg:text-gray-600 text-gray-900 hover:text-gray-900 transition-color'
       to={slug}
       onMouseEnter={() => {
         setActiveImage(imageIndex)
@@ -43,9 +44,16 @@ const ProjectSnippet = ({
         animate='show'
         custom={imageIndex}
       >
-        <h2 className='font-bold underline text-xl lg:mb-0 mb-4'>{title}</h2>
+        <h2 className='underline text-2xl'>{title}</h2>
+        <div className='lg:mb-0 font-bold mb-4 mt-2'>
+          {maintech.split(',').map((item, i) => (
+            <span>
+              {i !== 0 ? ' |' : ''} {item}
+            </span>
+          ))}
+        </div>
         <Img className='lg:hidden shadow-lg' fluid={imageFluid} />
-        <p className='lg:mt-1 mt-6 sm:text-base text-sm'>{blurb}</p>
+        <p className='lg:mt-2 mt-6 sm:text-base text-sm'>{blurb}</p>
       </motion.div>
     </TransitionLinkDefault>
   )

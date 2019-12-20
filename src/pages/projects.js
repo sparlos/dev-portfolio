@@ -50,13 +50,14 @@ const Projects = ({ data }) => {
   const projects = () =>
     data.allMarkdownRemark.edges.map(({ node }, i) => {
       const id = node.id
-      const { title, blurb, image } = node.frontmatter
+      const { title, blurb, image, maintech } = node.frontmatter
       const slug = node.fields.slug
 
       const imageFluid = image.childImageSharp.fluid
 
       return (
         <ProjectSnippet
+          maintech={maintech}
           slug={slug}
           key={id}
           imageIndex={i}
@@ -114,6 +115,7 @@ export const query = graphql`
           frontmatter {
             title
             blurb
+            maintech
             image {
               childImageSharp {
                 fluid(maxWidth: 1000) {
