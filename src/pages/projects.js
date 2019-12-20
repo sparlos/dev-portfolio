@@ -1,13 +1,13 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
-import { graphql } from "gatsby"
-import { motion } from "framer-motion"
+import { graphql } from 'gatsby'
+import { motion } from 'framer-motion'
 
-import TransitionLink, { TransitionState } from "gatsby-plugin-transition-link"
+import { TransitionState } from 'gatsby-plugin-transition-link'
 import SEO from '../components/seo'
 
-import ProjectSnippet from "../components/ProjectSnippet"
-import ImageSwitcher from "../components/ImageSwitcher"
+import ProjectSnippet from '../components/ProjectSnippet'
+import ImageSwitcher from '../components/ImageSwitcher'
 
 const Projects = ({ data }) => {
   const variants = {
@@ -24,7 +24,7 @@ const Projects = ({ data }) => {
         y: {
           from: 0,
         },
-        type: "spring",
+        type: 'spring',
         mass: 1,
         damping: 50,
       },
@@ -34,7 +34,7 @@ const Projects = ({ data }) => {
       y: 100,
       x: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         mass: 0.3,
         damping: 50,
       },
@@ -76,24 +76,26 @@ const Projects = ({ data }) => {
   return (
     <TransitionState>
       {({ transitionStatus }) => (
-        <div className="font-sans my-32 flex text-gray-900">
-          <SEO title="Projects" />
+        <div className='font-sans my-32 flex text-gray-900'>
+          <SEO title='Projects' />
           <motion.div
-            className="lg:pl-40 lg:mx-0 mx-auto lg:w-3/6 w-5/6"
+            className='lg:pl-40 lg:mx-0 mx-auto lg:w-3/6 w-5/6'
             variants={variants}
-            initial="hidden"
+            initial='hidden'
             animate={
-              ["entering", "entered", "POP"].includes(transitionStatus)
-                ? "show"
-                : "exit"
+              ['entering', 'entered', 'POP'].includes(transitionStatus)
+                ? 'show'
+                : 'exit'
             }
           >
-            <h1 className="heading-main">
-              Projects
-            </h1>
-            <div className="mt-6">{projects()}</div>
+            <h1 className='heading-main'>Projects</h1>
+            <div className='mt-6'>{projects()}</div>
           </motion.div>
-          <ImageSwitcher activeImage={activeImage} images={images()} transitionStatus={transitionStatus} />
+          <ImageSwitcher
+            activeImage={activeImage}
+            images={images()}
+            transitionStatus={transitionStatus}
+          />
         </div>
       )}
     </TransitionState>

@@ -28,9 +28,8 @@
     top: 350px;
 
     @include breakpoint(sm) {
-      top: auto;
       right: 15%;
-      bottom: 175px;
+      top: 675px;
     }
   }
 }

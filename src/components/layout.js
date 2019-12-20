@@ -1,25 +1,15 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { motion, AnimatePresence } from 'framer-motion'
 
-import { motion, AnimatePresence } from "framer-motion"
+import Box from '../components/Box'
+import FancyBox from '../components/FancyBox'
+import NavbarToggle from '../components/NavbarToggle'
+import Navbar from './Navbar'
 
-import Header from "./header"
-
-import Box from "../components/Box"
-import FancyBox from "../components/FancyBox"
-import NavbarToggle from "../components/NavbarToggle"
-import Navbar from "./Navbar"
-
-import "./tailwind.css"
-import "./box.scss"
+import './tailwind.css'
+import './box.scss'
 
 const Layout = ({ children, path }) => {
   const [navbar, setNavbar] = useState(false)
@@ -33,7 +23,7 @@ const Layout = ({ children, path }) => {
   }
 
   const transition = {
-    type: "spring",
+    type: 'spring',
     damping: 100,
     mass: 0.5,
   }
@@ -43,19 +33,19 @@ const Layout = ({ children, path }) => {
       <AnimatePresence>
         {navbar && (
           <motion.div
-            key="navbar"
+            key='navbar'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={transition}
-            className="fixed h-screen w-full z-40 bg-gray-900"
+            className='fixed h-screen w-full z-40 bg-gray-900'
           >
             <Navbar toggleNavbar={handleSetNavbar} />
           </motion.div>
         )}
       </AnimatePresence>
       <AnimatePresence>
-        {path !== "/" && (
+        {path !== '/' && (
           <NavbarToggle
             navbar={navbar}
             setNavbar={handleSetNavbar}
@@ -64,15 +54,15 @@ const Layout = ({ children, path }) => {
         )}
       </AnimatePresence>
       <motion.div
-        initial="hidden"
-        animate="visible"
+        initial='hidden'
+        animate='visible'
         variants={backgroundVariants}
-        className="relative lg:w-11/12 md:w-full bg-gray-100 mx-auto overflow-x-hidden min-h-screen"
+        className='relative lg:w-11/12 md:w-full bg-gray-100 mx-auto overflow-x-hidden min-h-screen'
         style={{
           zIndex: 0,
         }}
       >
-        <div className="relative z-0">{children}</div>
+        <div className='relative z-0'>{children}</div>
         <FancyBox custom={2} />
         <Box size={56} position={1} rotation={45} custom={1} path={path} />
 
