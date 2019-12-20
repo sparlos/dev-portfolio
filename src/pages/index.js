@@ -1,24 +1,20 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
+import React, { useState } from 'react'
 
-import TransitionLink, { TransitionState } from "gatsby-plugin-transition-link"
+import TransitionLink, { TransitionState } from 'gatsby-plugin-transition-link'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from '../components/seo'
 
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
-import "./index.scss"
+import './index.scss'
 
 const IndexPage = () => {
-
   const variants = {
     enter: {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 20,
       },
     },
@@ -26,7 +22,7 @@ const IndexPage = () => {
       y: 150,
       opacity: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 200,
         mass: 0.1,
       },
@@ -35,33 +31,33 @@ const IndexPage = () => {
 
   return (
     <div>
-      <SEO title="Home" />
+      <SEO title='Home' />
       <TransitionState>
         {({ transitionStatus }) => {
           return (
             <motion.div
-              className="heading w-full text-center relative mx-auto font-sans text-gray-900 h-screen"
+              className='heading w-full text-center relative mx-auto font-sans text-gray-900 h-screen'
               variants={variants}
-              initial="exit"
+              initial='exit'
               animate={
-                ["entering", "entered", "POP"].includes(transitionStatus)
-                  ? "enter"
-                  : "exit"
+                ['entering', 'entered', 'POP'].includes(transitionStatus)
+                  ? 'enter'
+                  : 'exit'
               }
             >
-              <div className="heading__text inline-block xl:-mt-6 lg:-mt-4 mt-16 xl:text-7xl lg:text-6xl sm:text-5xl text-4xl">
-                <span className="heading__s xl:text-11xl lg:text-10xl sm:text-9xl text-8xl">
+              <div className='heading__text inline-block xl:-mt-6 lg:-mt-4 mt-16 xl:text-7xl lg:text-6xl sm:text-5xl text-4xl'>
+                <span className='heading__s xl:text-11xl lg:text-10xl sm:text-9xl text-8xl'>
                   S
                 </span>
-                <span className="heading__top">tephen</span>
-                <span className="heading__bottom">parling</span>
-                <div className="sm:font-thin font-medium text-gray-600 lg:-mt-24 sm:-mt-12 -mt-4 sm:mr-8 text-base sm:text-xl text-right">
+                <span className='heading__top'>tephen</span>
+                <span className='heading__bottom'>parling</span>
+                <div className='sm:font-thin font-medium text-gray-600 lg:-mt-24 sm:-mt-12 -mt-4 sm:mr-8 text-base sm:text-xl text-right'>
                   Fullstack Web Developer & Designer
                 </div>
-                <ul className="nav font-medium sm:text-right text-center sm:mr-8 mt-8 sm:text-2xl text-xl underline">
-                  <li className="">
-                  <TransitionLink
-                      to="/projects"
+                <ul className='nav font-medium sm:text-right text-center sm:mr-8 mt-8 sm:text-2xl text-xl underline'>
+                  <li className=''>
+                    <TransitionLink
+                      to='/projects'
                       exit={{
                         length: 0.5,
                       }}
@@ -72,9 +68,9 @@ const IndexPage = () => {
                       Projects
                     </TransitionLink>
                   </li>
-                  <li className=" mt-4">
+                  <li className=' mt-4'>
                     <TransitionLink
-                      to="/about"
+                      to='/about'
                       exit={{
                         length: 0.5,
                       }}
@@ -85,9 +81,9 @@ const IndexPage = () => {
                       About
                     </TransitionLink>
                   </li>
-                  <li className=" mt-4">
+                  <li className=' mt-4'>
                     <TransitionLink
-                      to="/contact"
+                      to='/contact'
                       exit={{
                         length: 0.5,
                       }}
