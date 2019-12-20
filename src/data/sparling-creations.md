@@ -2,6 +2,7 @@
 title: "Sparling Creations"
 blurb: "Freelance business site showcasing web design, video editing and music production talents. Written primarily in Vue."
 image: ../images/sparling-creations.png
+maintech: Vue,SCSS,GitHub
 tags: Vue,Vue Router,SCSS,GitHub,SoundCloud API  
 ---
 

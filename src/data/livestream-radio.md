@@ -2,6 +2,7 @@
 title: "Livestream Radio"
 blurb: "A website for categorizing YouTube livestreams. Written primarily in Vue."
 image: ../images/livestream-radio.png
+maintech: Vue,Vuetify,SCSS
 tags: Vue,Vuetify,SCSS,GitHub,Material Design,YouTube iframe API
 ---
 A [website](https://livestreamradio.netlify.com/) that allows a user to add & categorize YouTube livestreams as “stations”. Open source and maintained on [GitHub](https://github.com/sparlos/livestream-radio).
