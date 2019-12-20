@@ -3,6 +3,8 @@ import React from "react"
 import TransitionLink, { TransitionState } from "gatsby-plugin-transition-link"
 import { motion } from "framer-motion"
 
+import SEO from '../components/seo'
+
 const About = () => {
   const variants = {
     hidden: {
@@ -48,6 +50,7 @@ const About = () => {
               : "exit"
           }
         >
+          <SEO title="About" />
           <h1 className="heading-main">About</h1>
           <div className="mt-12 md:leading-relaxed">
             <p className="mt-6">

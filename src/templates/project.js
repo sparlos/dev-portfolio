@@ -2,6 +2,7 @@ import React from "react"
 
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 import "./project.scss"
 
@@ -12,7 +13,10 @@ const Project = ({ data }) => {
   const tagList = () =>
     tags.split(",").map((tag, i) => {
       return (
-        <li className="flex xl:flex-33 flex-initial mt-3 lg:ml-0 mr-6" key={tag}>
+        <li
+          className="flex xl:flex-33 flex-initial mt-3 lg:ml-0 mr-6"
+          key={tag}
+        >
           <span className={`text-left w-full`}>{tag}</span>
         </li>
       )
@@ -20,6 +24,7 @@ const Project = ({ data }) => {
 
   return (
     <div className="w-full font-sans my-32 xl:px-32 text-gray-900">
+      <SEO title={title} />
       <div className="flex flex-wrap lg:justify-start justify-center px-4">
         <h1 className="sm:text-4xl sm:font-normal font-bold text-3xl tracking-wide font-normal lg:flex-100 sm:flex-75 flex-100 mb-4">
           {title}

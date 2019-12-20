@@ -1,6 +1,7 @@
 import React from "react"
 
 import { motion } from "framer-motion"
+import SEO from "../components/seo"
 
 import TransitionLink, { TransitionState } from "gatsby-plugin-transition-link"
 
@@ -81,6 +82,7 @@ const contact = () => {
                 : "exit"
             }
           >
+            <SEO title="Contact" />
             <motion.h1
               variants={headingVariants}
               className="heading-main sm:text-left"
@@ -95,7 +97,7 @@ const contact = () => {
               >
                 <FaLinkedin className="mx-auto" />
               </Icon>
-              
+
               <Icon
                 href="https://twitter.com/SparlosCode"
                 linkTitle="Twitter"
@@ -127,7 +129,6 @@ const contact = () => {
               >
                 <FaCodepen className="mx-auto" />
               </Icon>
-
             </div>
             <motion.div variants={iconVariants} className="mt-8 underline">
               <TransitionLink
