@@ -3,7 +3,7 @@ import React from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import './ImageSwitcher.scss'
 
-const ImageSwitcher = ({ activeImage, images }) => {
+const ImageSwitcher = ({ activeImage, images, transitionStatus }) => {
 
   const variants = {
     show: {
@@ -11,7 +11,7 @@ const ImageSwitcher = ({ activeImage, images }) => {
       opacity: 1
     },
     hide: {
-      y: 100, opacity:0 
+      y: 100, opacity: 0
     }
   }
 
@@ -26,7 +26,11 @@ const ImageSwitcher = ({ activeImage, images }) => {
               key={activeImage}
               src={images[activeImage].src}
               initial="hide"
-              animate="show"
+              animate={
+                ["entering", "entered", "POP"].includes(transitionStatus)
+                  ? "show"
+                  : "hide"
+              }
               exit="hide"
               transition={{
                 y: {
