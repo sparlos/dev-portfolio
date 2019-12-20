@@ -21,7 +21,7 @@ const ImageSwitcher = ({ activeImage, images, transitionStatus }) => {
         <div className='image-switcher lg:block hidden'>
           <AnimatePresence>
             <motion.img
-              className='image-switcher__image'
+              className='image-switcher__image shadow-lg'
               variants={variants}
               key={activeImage}
               src={images[activeImage].src}

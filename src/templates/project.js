@@ -71,7 +71,7 @@ const Project = ({ data }) => {
               {title}
             </h1>
             <div className='lg:flex-50 sm:flex-75 flex-100 pr-4'>
-              <Img className='w-full' fluid={image.childImageSharp.fluid} />
+              <Img className='w-full shadow-lg' fluid={image.childImageSharp.fluid} />
             </div>
             <div className='lg:flex-50 sm:flex-75 flex-100 lg:pl-4 lg:mt-0 mt-6 content-start flex flex-wrap justify-center lg:order-none order-last xl:px-10'>
               <h3 className='font-bold flex-100 mb-2 text-gray-700'>

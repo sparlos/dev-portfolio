@@ -44,7 +44,7 @@ const ProjectSnippet = ({
         custom={imageIndex}
       >
         <h2 className='font-bold underline text-xl lg:mb-0 mb-4'>{title}</h2>
-        <Img className='lg:hidden' fluid={imageFluid} />
+        <Img className='lg:hidden shadow-lg' fluid={imageFluid} />
         <p className='lg:mt-1 mt-6 sm:text-base text-sm'>{blurb}</p>
       </motion.div>
     </TransitionLinkDefault>
