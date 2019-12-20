@@ -34,7 +34,7 @@ const Layout = ({ children, path }) => {
 
   const transition = {
     type: "spring",
-    damping: 200,
+    damping: 100,
     mass: 0.5,
   }
 
@@ -44,8 +44,8 @@ const Layout = ({ children, path }) => {
         {navbar && (
           <motion.div
             key="navbar"
-            initial={{ opacity: 0, scale: 0, borderRadius: "20%" }}
-            animate={{ opacity: 1, scale: 1, borderRadius: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={transition}
             className="fixed h-screen w-full z-40 bg-gray-900"

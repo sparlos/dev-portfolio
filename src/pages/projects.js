@@ -93,7 +93,7 @@ const Projects = ({ data }) => {
             </h1>
             <div className="mt-6">{projects()}</div>
           </motion.div>
-          <ImageSwitcher activeImage={activeImage} images={images()} />
+          <ImageSwitcher activeImage={activeImage} images={images()} transitionStatus={transitionStatus} />
         </div>
       )}
     </TransitionState>
