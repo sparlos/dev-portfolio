@@ -3,7 +3,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import SEO from '../components/seo'
 
-import TransitionLink, { TransitionState } from 'gatsby-plugin-transition-link'
+import { TransitionState } from 'gatsby-plugin-transition-link'
+import TransitionLinkDefault from '../components/TransitionLinkDefault'
 
 import Icon from '../components/Icon'
 
@@ -131,18 +132,12 @@ const contact = () => {
               </Icon>
             </div>
             <motion.div variants={iconVariants} className='mt-8 underline'>
-              <TransitionLink
+              <TransitionLinkDefault
                 className='link'
                 to='/'
-                exit={{
-                  length: 0.5,
-                }}
-                entry={{
-                  delay: 0.2,
-                }}
               >
                 Back Home
-              </TransitionLink>
+              </TransitionLinkDefault>
             </motion.div>
           </motion.div>
         )

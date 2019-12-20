@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { motion } from 'framer-motion'
-import TransitionLink from 'gatsby-plugin-transition-link'
+import TransitionLinkDefault from '../components/TransitionLinkDefault'
 
 const NavbarItem = ({ custom, label, toggleNavbar }) => {
   const variants = {
@@ -29,18 +29,12 @@ const NavbarItem = ({ custom, label, toggleNavbar }) => {
       animate='open'
       custom={custom}
     >
-      <TransitionLink
+      <TransitionLinkDefault
         to={label !== 'home' ? `/${label}` : '/'}
-        exit={{
-          length: 0.5,
-        }}
-        entry={{
-          delay: 0.2,
-        }}
         onClick={() => toggleNavbar()}
       >
         {label}
-      </TransitionLink>
+      </TransitionLinkDefault>
     </motion.li>
   )
 }

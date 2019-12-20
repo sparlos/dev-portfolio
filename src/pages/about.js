@@ -1,6 +1,7 @@
 import React from 'react'
 
-import TransitionLink, { TransitionState } from 'gatsby-plugin-transition-link'
+import { TransitionState } from 'gatsby-plugin-transition-link'
+import TransitionLinkDefault from '../components/TransitionLinkDefault'
 import { motion } from 'framer-motion'
 
 import SEO from '../components/seo'
@@ -87,32 +88,20 @@ const About = () => {
               If all of this sounds good to you, I'm ready to work. Preferably
               full-time; I'm open to either local (Toronto area) or remote
               work.&nbsp;
-              <TransitionLink
+              <TransitionLinkDefault
                 className='font-bold link'
                 to='/contact/'
-                exit={{
-                  length: 0.5,
-                }}
-                entry={{
-                  delay: 0.2,
-                }}
               >
                 Please reach out to me and I'd love to start a dialogue.
-              </TransitionLink>
+              </TransitionLinkDefault>
             </p>
             <p className='mt-10'>
-              <TransitionLink
+              <TransitionLinkDefault
                 className='link'
                 to='/'
-                exit={{
-                  length: 0.5,
-                }}
-                entry={{
-                  delay: 0.2,
-                }}
               >
                 Back Home
-              </TransitionLink>
+              </TransitionLinkDefault>
             </p>
           </div>
         </motion.div>

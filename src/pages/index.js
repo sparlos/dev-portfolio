@@ -1,6 +1,7 @@
 import React from 'react'
 
-import TransitionLink, { TransitionState } from 'gatsby-plugin-transition-link'
+import { TransitionState } from 'gatsby-plugin-transition-link'
+import TransitionLinkDefault from '../components/TransitionLinkDefault'
 
 import SEO from '../components/seo'
 
@@ -56,43 +57,25 @@ const IndexPage = () => {
                 </div>
                 <ul className='nav font-medium sm:text-right text-center sm:mr-8 mt-8 sm:text-2xl text-xl underline'>
                   <li className=''>
-                    <TransitionLink
+                    <TransitionLinkDefault
                       to='/projects'
-                      exit={{
-                        length: 0.5,
-                      }}
-                      entry={{
-                        delay: 0.2,
-                      }}
                     >
                       Projects
-                    </TransitionLink>
+                    </TransitionLinkDefault>
                   </li>
                   <li className=' mt-4'>
-                    <TransitionLink
+                    <TransitionLinkDefault
                       to='/about'
-                      exit={{
-                        length: 0.5,
-                      }}
-                      entry={{
-                        delay: 0.2,
-                      }}
                     >
                       About
-                    </TransitionLink>
+                    </TransitionLinkDefault>
                   </li>
                   <li className=' mt-4'>
-                    <TransitionLink
+                    <TransitionLinkDefault
                       to='/contact'
-                      exit={{
-                        length: 0.5,
-                      }}
-                      entry={{
-                        delay: 0.2,
-                      }}
                     >
                       Contact
-                    </TransitionLink>
+                    </TransitionLinkDefault>
                   </li>
                 </ul>
               </div>

@@ -5,7 +5,8 @@ import Img from 'gatsby-image'
 import SEO from '../components/seo'
 
 import { motion } from 'framer-motion'
-import TransitionLink, { TransitionState } from 'gatsby-plugin-transition-link'
+import { TransitionState } from 'gatsby-plugin-transition-link'
+import TransitionLinkDefault from '../components/TransitionLinkDefault'
 import './project.scss'
 
 const Project = ({ data }) => {
@@ -80,7 +81,7 @@ const Project = ({ data }) => {
                 className='project-text'
                 dangerouslySetInnerHTML={{ __html: post.html }}
               />
-              <TransitionLink
+              <TransitionLinkDefault
                 className='underline text-gray-600 font-bold flex-100 mt-6'
                 to='/projects'
                 exit={{
@@ -91,7 +92,7 @@ const Project = ({ data }) => {
                 }}
               >
                 Back to Projects
-              </TransitionLink>
+              </TransitionLinkDefault>
             </div>
             <div className='lg:flex-50 sm:flex-75 flex-100'>
               <h3 className='mt-6 font-bold text-gray-700'>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Img from 'gatsby-image'
-import TransitionLink from 'gatsby-plugin-transition-link'
+import TransitionLinkDefault from '../components/TransitionLinkDefault'
 import { motion } from 'framer-motion'
 
 const ProjectSnippet = ({
@@ -30,15 +30,9 @@ const ProjectSnippet = ({
   }
 
   return (
-    <TransitionLink
+    <TransitionLinkDefault
       className='relative block mb-6 lg:text-gray-600 text-gray-900 hover:text-gray-900 transition-color'
       to={slug}
-      exit={{
-        length: 0.5,
-      }}
-      entry={{
-        delay: 0.2,
-      }}
       onMouseEnter={() => {
         setActiveImage(imageIndex)
       }}
@@ -53,7 +47,7 @@ const ProjectSnippet = ({
         <Img className='lg:hidden' fluid={imageFluid} />
         <p className='lg:mt-1 mt-6 sm:text-base text-sm'>{blurb}</p>
       </motion.div>
-    </TransitionLink>
+    </TransitionLinkDefault>
   )
 }
 
