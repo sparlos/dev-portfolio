@@ -12,7 +12,7 @@ const ProjectSnippet = ({ setActiveImage, imageIndex, title, blurb, imageFluid, 
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.1 + ((i + 1) * 0.1),
+        delay: 0.15 + ((i + 1) * 0.1),
         type: 'spring',
         damping: 100,
         mass: 1
