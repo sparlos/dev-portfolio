@@ -31,7 +31,7 @@ const ProjectSnippet = ({
 
   return (
     <TransitionLink
-      className='link'
+      className='relative block mb-6 lg:text-gray-600 text-gray-900 hover:text-gray-900 transition-color'
       to={slug}
       exit={{
         length: 0.5,
@@ -39,7 +39,6 @@ const ProjectSnippet = ({
       entry={{
         delay: 0.2,
       }}
-      className='relative block mb-6 lg:text-gray-600 text-gray-900 hover:text-gray-900 transition-color'
       onMouseEnter={() => {
         setActiveImage(imageIndex)
       }}

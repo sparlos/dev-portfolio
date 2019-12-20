@@ -60,7 +60,7 @@ const About = () => {
               <b>
                 React, jQuery, SQL, PHP, Node, SASS & SCSS, Bootstrap, VS Code,
                 Figma, WordPress, Python, Vue, MongoDB, and GraphQL.&nbsp;
-                <a href='#' className='link'>
+                <a href='!#' className='link'>
                   You can find my full CV here.
                 </a>
               </b>
