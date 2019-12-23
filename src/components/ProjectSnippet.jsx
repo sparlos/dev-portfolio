@@ -47,7 +47,7 @@ const ProjectSnippet = ({
         <h2 className='underline text-2xl'>{title}</h2>
         <div className='lg:mb-0 font-bold mb-4 mt-2'>
           {maintech.split(',').map((item, i) => (
-            <span>
+            <span key={i}>
               {i !== 0 ? ' |' : ''} {item}
             </span>
           ))}
