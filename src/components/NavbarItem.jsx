@@ -32,6 +32,7 @@ const NavbarItem = ({ custom, label, toggleNavbar }) => {
       <TransitionLinkDefault
         to={label !== 'home' ? `/${label}` : '/'}
         onClick={() => toggleNavbar()}
+        className="link--plain transition-color"
       >
         {label}
       </TransitionLinkDefault>

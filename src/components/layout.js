@@ -12,7 +12,7 @@ import './tailwind.css'
 import './box.scss'
 
 const Layout = ({ children, path }) => {
-  const [navbar, setNavbar] = useState(true)
+  const [navbar, setNavbar] = useState(false)
   const handleSetNavbar = () => setNavbar(!navbar)
 
   const backgroundVariants = {
