@@ -6,6 +6,8 @@ import { motion } from 'framer-motion'
 
 import SEO from '../components/seo'
 
+import cv from '../data/cv.pdf'
+
 const About = () => {
   const variants = {
     hidden: {
@@ -61,7 +63,12 @@ const About = () => {
               <b>
                 React, jQuery, SQL, PHP, Node, SASS & SCSS, Bootstrap, VS Code,
                 Figma, WordPress, Python, Vue, MongoDB, and GraphQL.&nbsp;
-                <a href='!#' className='link'>
+                <a
+                  href={cv}
+                  className='link'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
                   You can find my full CV here.
                 </a>
               </b>
@@ -88,18 +95,12 @@ const About = () => {
               If all of this sounds good to you, I'm ready to work. Preferably
               full-time; I'm open to either local (Toronto area) or remote
               work.&nbsp;
-              <TransitionLinkDefault
-                className='font-bold link'
-                to='/contact/'
-              >
+              <TransitionLinkDefault className='font-bold link' to='/contact/'>
                 Please reach out to me and I'd love to start a dialogue.
               </TransitionLinkDefault>
             </p>
             <p className='mt-10'>
-              <TransitionLinkDefault
-                className='link'
-                to='/'
-              >
+              <TransitionLinkDefault className='link' to='/'>
                 Back Home
               </TransitionLinkDefault>
             </p>
