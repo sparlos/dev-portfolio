@@ -82,7 +82,7 @@ const Project = ({ data }) => {
                 dangerouslySetInnerHTML={{ __html: post.html }}
               />
               <TransitionLinkDefault
-                className='underline text-gray-600 font-bold flex-100 mt-6'
+                className='underline text-teal-500 flex-100 mt-6'
                 to='/projects'
                 exit={{
                   length: 0.5,
