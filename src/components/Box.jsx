@@ -11,6 +11,7 @@ const Box = ({ size, position, rotation, custom, path }) => {
 
   const boxVariants = {
     visible: i => ({
+      borderRadius: 0,
       backgroundColor: boxInitialColor,
       opacity: 1,
       scale: 1,
@@ -23,8 +24,9 @@ const Box = ({ size, position, rotation, custom, path }) => {
         delay: i * 0.1,
       },
     }),
-    hidden: { opacity: 0, y: 200, rotate: 0, scale: 1 },
+    hidden: { opacity: 0, y: 200, rotate: 0, scale: 1, borderRadius: 0 },
     about: {
+      borderRadius: 0,
       backgroundColor: boxInitialColor,
       opacity: 1,
       scale: 1,
@@ -39,6 +41,7 @@ const Box = ({ size, position, rotation, custom, path }) => {
     },
     contact: {
       backgroundColor: boxHiddenColor,
+      borderRadius: 0,
       opacity: 1,
       rotate: rotation * 5,
       transition: {
@@ -49,6 +52,24 @@ const Box = ({ size, position, rotation, custom, path }) => {
         },
       },
     },
+    projects: {
+      backgroundColor: boxInitialColor,
+      opacity: 1,
+      scale: 1,
+      rotate: rotation * 8,
+      borderRadius: '100%',
+      transition: {
+        rotate: {
+          type: 'spring',
+          mass: 5,
+          damping: 300,
+        },
+        borderRadius: {
+          type: 'tween',
+          duration: 2
+        }
+      },
+    }
   }
 
   const animation = () => {
@@ -57,6 +78,8 @@ const Box = ({ size, position, rotation, custom, path }) => {
         return 'about'
       case '/contact/':
         return 'contact'
+      case '/projects/':
+        return 'projects'
       default:
         return 'visible'
     }
