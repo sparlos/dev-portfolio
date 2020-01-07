@@ -9,4 +9,16 @@
     color: #38B2AC;
     font-weight: bold;
   }
+
+  & li {
+    margin-bottom: 7px;
+
+    & a {
+      font-weight: normal;
+    }
+  }
+
+  & ul {
+    margin-bottom: 2rem;
+  }
 }
