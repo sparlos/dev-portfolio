@@ -38,7 +38,7 @@ const Layout = ({ children, path }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={transition}
-            className='fixed h-screen w-full z-40 bg-gray-900'
+            className='fixed h-screen w-full z-40 bg-gray-900 ,'
           >
             <Navbar toggleNavbar={handleSetNavbar} />
           </motion.div>
