@@ -71,7 +71,18 @@ const Project = ({ data }) => {
               {title}
             </h1>
             <div className='lg:flex-50 sm:flex-75 flex-100 pr-4'>
-              <Img className='w-full shadow-lg' fluid={image.childImageSharp.fluid} />
+              <Img
+                className='w-full shadow-lg'
+                fluid={image.childImageSharp.fluid}
+              />
+              <div className='lg:flex-50 sm:flex-75 flex-100'>
+                <h3 className='mt-6 font-bold text-gray-700'>
+                  Technologies Used
+                </h3>
+                <ul className='flex flex-wrap xl:justify-between text-gray-600'>
+                  {tagList()}
+                </ul>
+              </div>
             </div>
             <div className='lg:flex-50 sm:flex-75 flex-100 lg:pl-4 lg:mt-0 mt-6 content-start flex flex-wrap justify-center lg:order-none order-last xl:px-10'>
               <h3 className='font-bold flex-100 mb-2 text-gray-700'>
@@ -93,14 +104,6 @@ const Project = ({ data }) => {
               >
                 Back to Projects
               </TransitionLinkDefault>
-            </div>
-            <div className='lg:flex-50 sm:flex-75 flex-100'>
-              <h3 className='mt-6 font-bold text-gray-700'>
-                Technologies Used
-              </h3>
-              <ul className='flex flex-wrap xl:justify-between text-gray-600'>
-                {tagList()}
-              </ul>
             </div>
           </div>
         </motion.div>
