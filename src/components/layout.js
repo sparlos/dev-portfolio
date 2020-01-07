@@ -12,6 +12,7 @@ import './tailwind.css'
 import './box.scss'
 
 const Layout = ({ children, path }) => {
+  console.log(path)
   const [navbar, setNavbar] = useState(false)
   const handleSetNavbar = () => setNavbar(!navbar)
 
@@ -30,6 +31,17 @@ const Layout = ({ children, path }) => {
 
   return (
     <div>
+      <div>
+        <AnimatePresence>
+          {path !== '/' && (
+            <NavbarToggle
+              navbar={navbar}
+              setNavbar={handleSetNavbar}
+              transition={transition}
+            />
+          )}
+        </AnimatePresence>
+      </div>
       <AnimatePresence>
         {navbar && (
           <motion.div
@@ -42,15 +54,6 @@ const Layout = ({ children, path }) => {
           >
             <Navbar toggleNavbar={handleSetNavbar} />
           </motion.div>
-        )}
-      </AnimatePresence>
-      <AnimatePresence>
-        {path !== '/' && (
-          <NavbarToggle
-            navbar={navbar}
-            setNavbar={handleSetNavbar}
-            transition={transition}
-          />
         )}
       </AnimatePresence>
       <motion.div
