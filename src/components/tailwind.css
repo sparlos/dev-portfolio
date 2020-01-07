@@ -8,6 +8,14 @@
   @apply underline text-teal-500;
 }
 
+.link--plain {
+  @apply underline;
+}
+
+.link--plain:hover {
+  @apply text-teal-400;
+}
+
 .transition-color {
   transition: .1s color;
 }

@@ -46,7 +46,7 @@ const IndexPage = () => {
                   : 'exit'
               }
             >
-              <div className='heading__text inline-block xl:-mt-6 lg:-mt-4 mt-16 xl:text-7xl lg:text-6xl sm:text-5xl text-4xl'>
+              <div className='heading__text inline-block xl:-mt-6 lg:-mt-4 mt-16 xl:text-7xl lg:text-6xl sm:text-5xl text-4xl pb-20'>
                 <span className='heading__s xl:text-11xl lg:text-10xl sm:text-9xl text-8xl'>
                   S
                 </span>
@@ -59,6 +59,7 @@ const IndexPage = () => {
                   <li className=''>
                     <TransitionLinkDefault
                       to='/projects'
+                      className='link--plain transition-color'
                     >
                       Projects
                     </TransitionLinkDefault>
@@ -66,6 +67,7 @@ const IndexPage = () => {
                   <li className=' mt-4'>
                     <TransitionLinkDefault
                       to='/about'
+                      className='link--plain transition-color'
                     >
                       About
                     </TransitionLinkDefault>
@@ -73,6 +75,7 @@ const IndexPage = () => {
                   <li className=' mt-4'>
                     <TransitionLinkDefault
                       to='/contact'
+                      className='link--plain transition-color'
                     >
                       Contact
                     </TransitionLinkDefault>

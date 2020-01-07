@@ -1,0 +1,22 @@
+.nav-toggle {
+
+  &:after {
+    content: '';
+    z-index: -2;
+    position: absolute;
+    width: 140%;
+    height: 220%;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(247, 250, 252, 0.9);
+    transition: .2s all;
+  }
+
+  &.active:after {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    box-shadow: none;
+  }
+}
