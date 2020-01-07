@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+import './NavbarToggle.scss'
+
 const gray900 = '#1A202C'
 const gray100 = '#F7FAFC'
 
@@ -28,7 +30,7 @@ const Bar = props => {
       }}
       initial='closed'
       animate={props.navbar ? 'open' : 'closed'}
-      className='absolute w-full h-1 bg-gray-900 rounded'
+      className={`${props.className} block w-full h-1 bg-gray-900 rounded`}
       style={{
         height: '3px',
         ...props.style,
@@ -38,6 +40,9 @@ const Bar = props => {
 }
 
 const NavbarToggle = ({ navbar, setNavbar, transition }) => {
+
+  const activeClass = navbar ? 'active' : ''
+  
   return (
     <motion.div
       key='navbar'
@@ -46,10 +51,11 @@ const NavbarToggle = ({ navbar, setNavbar, transition }) => {
       exit={{ opacity: 0, y: -10 }}
       transition={transition}
       onClick={setNavbar}
-      className={`fixed md:w-16 w-12 md:h-12 h-10 z-50 cursor-pointer right-0 lg:mt-20 mt-16 rounded-full
-      lg:mr-40 md:mr-24 sm:mr-16 mr-12`}
+      className={`nav-toggle fixed md:w-16 w-12 z-50 cursor-pointer right-0 lg:mt-20 mt-16
+      lg:mr-40 md:mr-24 sm:mr-16 mr-12 ${activeClass}`}
     >
       <Bar
+        className="mb-3"
         navbar={navbar}
         variants={{
           open: {
@@ -60,14 +66,13 @@ const NavbarToggle = ({ navbar, setNavbar, transition }) => {
         }}
       />
       <Bar
-        style={{ top: 15, zIndex: -1 }}
+        className="mb-3"
         navbar={navbar}
         variants={{
           open: {},
         }}
       />
       <Bar
-        style={{ top: 30 }}
         navbar={navbar}
         variants={{
           open: {
