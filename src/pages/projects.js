@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { TransitionState } from 'gatsby-plugin-transition-link'
 
-import SEO from '../components/seo'
+import SEO from '../components/utility/seo'
 
 import { motion } from 'framer-motion'
 
