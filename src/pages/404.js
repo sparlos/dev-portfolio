@@ -1,15 +1,16 @@
 import React from 'react'
 
-import TransitionLinkDefault from '../components/TransitionLinkDefault'
 import { TransitionState } from 'gatsby-plugin-transition-link'
-
-import { motion } from 'framer-motion'
+import TransitionLinkDefault from '../components/TransitionLinkDefault'
 
 import SEO from '../components/seo'
 
+import { motion } from 'framer-motion'
+
+
 const NotFoundPage = () => {
   const variants = {
-    exit: {
+    hidden: {
       opacity: 0
     },
     show: {
@@ -23,11 +24,11 @@ const NotFoundPage = () => {
         <motion.div
           className='xl:w-3/6 lg:w-4/6 w-5/6 lg:ml-56 font-sans lg:my-40 my-32 pb-32 mx-auto'
           variants={variants}
-          initial='exit'
+          initial='hidden'
           animate={
             ['entering', 'entered', 'POP'].includes(transitionStatus)
               ? 'show'
-              : 'exit'
+              : 'hidden'
           }
         >
           <SEO title='404: Not found' />

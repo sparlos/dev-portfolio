@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 
-import { graphql } from 'gatsby'
+import { TransitionState } from 'gatsby-plugin-transition-link'
+
+import SEO from '../components/seo'
+
 import { motion } from 'framer-motion'
 
-import { TransitionState } from 'gatsby-plugin-transition-link'
-import SEO from '../components/seo'
+import { graphql } from 'gatsby'
 
 import ProjectSnippet from '../components/ProjectSnippet'
 import ImageSwitcher from '../components/ImageSwitcher'

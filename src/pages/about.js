@@ -2,9 +2,10 @@ import React from 'react'
 
 import { TransitionState } from 'gatsby-plugin-transition-link'
 import TransitionLinkDefault from '../components/TransitionLinkDefault'
-import { motion } from 'framer-motion'
 
 import SEO from '../components/seo'
+
+import { motion } from 'framer-motion'
 
 import cv from '../data/cv.pdf'
 
