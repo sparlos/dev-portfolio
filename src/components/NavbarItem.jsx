@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { motion } from 'framer-motion'
-import TransitionLinkDefault from '../components/TransitionLinkDefault'
+import TransitionLinkDefault from './utility/TransitionLinkDefault'
 
 const NavbarItem = ({ custom, label, toggleNavbar }) => {
   const variants = {

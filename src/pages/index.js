@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { TransitionState } from 'gatsby-plugin-transition-link'
-import TransitionLinkDefault from '../components/TransitionLinkDefault'
+import TransitionLinkDefault from '../components/utility/TransitionLinkDefault'
 
 import SEO from '../components/seo'
 

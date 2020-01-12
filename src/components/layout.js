@@ -8,8 +8,8 @@ import FancyBox from '../components/FancyBox'
 import NavbarToggle from '../components/NavbarToggle'
 import Navbar from './Navbar'
 
-import './tailwind.css'
-import './box.scss'
+import './styles/tailwind.css'
+import './styles/box.scss'
 
 const Layout = ({ children, path }) => {
   const [navbar, setNavbar] = useState(false)

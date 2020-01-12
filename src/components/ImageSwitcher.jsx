@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import './ImageSwitcher.scss'
+import './styles/ImageSwitcher.scss'
 
 const ImageSwitcher = ({ activeImage, images, transitionStatus }) => {
   const variants = {
