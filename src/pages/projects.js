@@ -49,8 +49,13 @@ const Projects = ({ data }) => {
     setActiveImage(imageIndex)
   }
 
+  const sortedNodes = () =>
+    data.allMarkdownRemark.edges.sort((a, b) =>
+      (a.node.frontmatter.position < b.node.frontmatter.position) ? -1 : 1
+    )
+
   const projects = () =>
-    data.allMarkdownRemark.edges.map(({ node }, i) => {
+    sortedNodes().map(({ node }, i) => {
       const id = node.id
       const { title, blurb, image, maintech } = node.frontmatter
       const slug = node.fields.slug
@@ -70,6 +75,9 @@ const Projects = ({ data }) => {
         ></ProjectSnippet>
       )
     })
+
+    const sortedProjects = () =>
+      projects.sort((a, b) => (a.position < b.position) ? 1 : -1)
 
   const images = () =>
     data.allMarkdownRemark.edges.map(
@@ -118,6 +126,7 @@ export const query = graphql`
             title
             blurb
             maintech
+            position
             image {
               childImageSharp {
                 fluid(maxWidth: 1000) {
