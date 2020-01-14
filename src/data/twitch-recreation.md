@@ -4,6 +4,7 @@ blurb: "A recreation of the twitch.tv homepage layout (circa February 2019)."
 image: ../images/twitch-recreation.png
 maintech: Design,SCSS,Vue
 tags: HTML,SCSS,JS,Vue,Design
+position: 7
 ---
 [A recreation of the twitch.tv homepage layout](https://codepen.io/sparlos/full/JxyRWr) from February 2019; the layout has since been changed. This project nicely showcases my ability to take a completely visual design and implement it in code. All of the CSS (SCSS) was hand-coded and no framework was used. Most of the page was created using flexbox, and all of the SCSS follows the BEM methodology.
 

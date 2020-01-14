@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Img from 'gatsby-image'
-import TransitionLinkDefault from '../components/TransitionLinkDefault'
+import TransitionLinkDefault from '../components/utility/TransitionLinkDefault'
 import { motion } from 'framer-motion'
 
 const ProjectSnippet = ({

@@ -4,6 +4,7 @@ blurb: "WordPress theme created for Baseball Development Group with a design foc
 image: ../images/bdg-connect.png
 maintech: WordPress,PHP,Bootstrap
 tags: HTML,CSS,JS,WordPress,PHP,Bootstrap
+position: 4
 ---
 A [website](http://bdgconnect.com/) created for the Baseball Development Group organization that highlights my ability to produce a WordPress theme from scratch, based on a customer design. The site is highly customizable and can be edited  by the owner/operator, making it easy to regularly update content. This is particularly important on the site’s “about us” page where the list  of team members varies constantly.
 
