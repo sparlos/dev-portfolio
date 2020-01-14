@@ -1,13 +1,10 @@
 ---
 title: "Sparling Creations"
-blurb: "Freelance business site showcasing web design, video editing and music production talents. Written primarily in Vue."
+blurb: "A Single Page Application showcasing my freelance web design, video editing and music production talents. Written primarily in Vue."
 image: ../images/sparling-creations.png
-maintech: Vue,SCSS,GitHub
-tags: Vue,Vue Router,SCSS,GitHub,SoundCloud API
-position: 2
+maintech: Vue,SCSS,Adobe XD
+tags: Vue,Vue Router,SCSS,SoundCloud API,Adobe XD
 ---
-A [website](https://livestreamradio.netlify.com/) that allows a user to add & categorize YouTube livestreams as “stations”. Open source and maintained on [GitHub](https://github.com/sparlos/livestream-radio).
+A [website](http://sparlingcreations.com/) built to house my freelance web design, video and audio projects. The site is powered by Vue and uses Vue Router for navigation.
 
-Some highlights include from scratch design, animations and transitions all hand coded using SCSS & BEM methodology and a ‘mini-app’ that wraps the SoundCloud iFrame API and lets a user play songs with a completely custom design and interface. The entire site is powered using [Cockpit CMS](https://getcockpit.com/) for easy addition of new projects.
-
-Time restrictions meant this site had to be built within a week. This restriction ended up being extremely beneficial for the project, forcing the most crucial features to the forefront.
+The design was created completely from scratch in Adobe XD, with animations and transitions all hand-coded using SCSS and BEM methodology. I wrote a mini-app in Vue that wraps the SoundCloud iFrame API in the ‘Music’ section of the site. This was done for aesthetic reasons in order to make the design of the player compliment the design of the site. The data layer of the site is powered using [Cockpit CMS](https://getcockpit.com/) allowing for easy addition of new projects.
