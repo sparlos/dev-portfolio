@@ -1,6 +1,6 @@
 ---
 title: "Stephen Sparling Developer Portfolio"
-blurb: "The very site you are on right now. Powered primarily by React/Gatsby."
+blurb: "The site you are on right now. Powered primarily by React/Gatsby."
 image: ../images/sparling-dev.png
 maintech: Gatsby,React,Tailwind
 tags: React,Gatsby,Figma,GraphQL,Tailwind,SCSS,Framer Motion
@@ -9,4 +9,4 @@ tags: React,Gatsby,Figma,GraphQL,Tailwind,SCSS,Framer Motion
 
 The design was created entirely using Figma, and is powered by [Tailwind CSS](https://tailwindcss.com/), a great utility-first CSS framework. All animations are either hand-crafted in SCSS or utilize the excellent [Framer Motion library](https://www.framer.com/motion/). The functionality of the site comes from Gatsby, with some custom React code and graphQL queries.
 
-Soruce code for the site is avaliable for perusal [here](https://github.com/sparlos/dev-portfolio).
+Soruce code for the site [is avaliable here](https://github.com/sparlos/dev-portfolio).

@@ -1,10 +1,10 @@
 ---
 title: "Sparling Creations"
-blurb: "Freelance business site showcasing web design, video editing and music production talents. Written primarily in Vue."
+blurb: "A Single Page Application showcasing my freelance web design, video editing and music production talents. Written primarily in Vue."
 image: ../images/sparling-creations.png
-maintech: Vue,SCSS,GitHub
-tags: Vue,Vue Router,SCSS,GitHub,SoundCloud API  
+maintech: Vue,SCSS,Adobe XD
+tags: Vue,Vue Router,SCSS,SoundCloud API,Adobe XD
 ---
 A [website](http://sparlingcreations.com/) built to house my freelance web design, video and audio projects. The site is powered by Vue and uses Vue Router for navigation.
 
-The design is completely from-scratch in Adobe XD, with animations and transitions all hand coded using SCSS & BEM methodology. A definitely highlight is the mini-app I wrote in Vue that wraps the SoundCloud iFrame API in the ‘music’ section of the site. I did this for aesthetic and design reasons so that the music player would fit the overall feel of the design more. The entire site is powered using [Cockpit CMS](https://getcockpit.com/) for easy addition of new projects.
+The design was created completely from scratch in Adobe XD, with animations and transitions all hand-coded using SCSS and BEM methodology. I wrote a mini-app in Vue that wraps the SoundCloud iFrame API in the ‘Music’ section of the site. This was done for aesthetic reasons in order to make the design of the player compliment the design of the site. The data layer of the site is powered using [Cockpit CMS](https://getcockpit.com/) allowing for easy addition of new projects.
