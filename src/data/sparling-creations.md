@@ -4,6 +4,7 @@ blurb: "A Single Page Application showcasing my freelance web design, video edit
 image: ../images/sparling-creations.png
 maintech: Vue,SCSS,Adobe XD
 tags: Vue,Vue Router,SCSS,SoundCloud API,Adobe XD
+position: 2
 ---
 A [website](http://sparlingcreations.com/) built to house my freelance web design, video and audio projects. The site is powered by Vue and uses Vue Router for navigation.
 
