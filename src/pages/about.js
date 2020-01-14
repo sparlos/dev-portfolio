@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 import SEO from '../components/seo'
 
-import cv from '../data/cv.pdf'
+import resume from '../data/resume.pdf'
 
 const About = () => {
   const variants = {
@@ -64,12 +64,12 @@ const About = () => {
                 React, jQuery, SQL, PHP, Node, SASS & SCSS, Bootstrap, VS Code,
                 Figma, WordPress, Python, Vue, MongoDB, and GraphQL.&nbsp;
                 <a
-                  href={cv}
+                  href={resume}
                   className='link'
                   rel='noopener noreferrer'
                   target='_blank'
                 >
-                  You can find my full CV here.
+                  You can find my full resume here.
                 </a>
               </b>
             </p>
