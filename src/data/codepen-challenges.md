@@ -4,6 +4,7 @@ blurb: "A collection of music-based CodePen experiments I built for some of the 
 image: ../images/codepen-challenges.png
 maintech: Vue,SCSS,JS
 tags: Vue,SCSS,JS,Animation,Algorithms,Design
+position: 5
 ---
 A [collection of CodePen experiments](https://codepen.io/collection/Xermmq) that were created for CodePen’s weekly challenges. As I have a music background and not too many people use music/audio as a feature in web development, I further added to the challenge and made every challenge submission based around music.
 

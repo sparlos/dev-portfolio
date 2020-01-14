@@ -3,7 +3,8 @@ title: "Sparling Creations"
 blurb: "Freelance business site showcasing web design, video editing and music production talents. Written primarily in Vue."
 image: ../images/sparling-creations.png
 maintech: Vue,SCSS,GitHub
-tags: Vue,Vue Router,SCSS,GitHub,SoundCloud API  
+tags: Vue,Vue Router,SCSS,GitHub,SoundCloud API
+position: 2
 ---
 A [website](https://livestreamradio.netlify.com/) that allows a user to add & categorize YouTube livestreams as “stations”. Open source and maintained on [GitHub](https://github.com/sparlos/livestream-radio).
 

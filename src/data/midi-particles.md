@@ -4,6 +4,7 @@ blurb: "A web app built on Vue that takes MIDI input via the web MIDI API to cre
 image: ../images/midi-particles.png
 maintech: Vue,Vuex,Web MIDI API
 tags: Vue,Web MIDI API,SCSS,Vuex,Canvas2D,localStorage,OOP
+position: 6
 ---
 [An extremely customizable application](https://midiparticles.netlify.com/) that takes MIDI input and creates particle visualizations. Because it uses the experimental Web MIDI API, it is only supported in Chrome at the moment. The project is open source and maintained [on GitHub](https://github.com/sparlos/MIDI-Particles).
 
