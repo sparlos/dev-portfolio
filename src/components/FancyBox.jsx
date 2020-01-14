@@ -1,5 +1,5 @@
 import React from 'react'
-import './FancyBox.scss'
+import './styles/FancyBox.scss'
 
 import { motion } from 'framer-motion'
 

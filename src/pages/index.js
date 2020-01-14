@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { TransitionState } from 'gatsby-plugin-transition-link'
-import TransitionLinkDefault from '../components/TransitionLinkDefault'
+import TransitionLinkDefault from '../components/utility/TransitionLinkDefault'
 
-import SEO from '../components/seo'
+import SEO from '../components/utility/seo'
 
 import { motion } from 'framer-motion'
 
@@ -11,21 +11,21 @@ import './index.scss'
 
 const IndexPage = () => {
   const variants = {
-    enter: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        damping: 20,
-      },
-    },
-    exit: {
+    hidden: {
       y: 150,
       opacity: 0,
       transition: {
         type: 'spring',
         damping: 200,
         mass: 0.1,
+      },
+    },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        damping: 20,
       },
     },
   }
@@ -39,11 +39,11 @@ const IndexPage = () => {
             <motion.div
               className='heading w-full text-center relative mx-auto font-sans text-gray-900 h-screen'
               variants={variants}
-              initial='exit'
+              initial='hidden'
               animate={
                 ['entering', 'entered', 'POP'].includes(transitionStatus)
-                  ? 'enter'
-                  : 'exit'
+                  ? 'show'
+                  : 'hidden'
               }
             >
               <div className='heading__text inline-block xl:-mt-6 lg:-mt-4 mt-16 xl:text-7xl lg:text-6xl sm:text-5xl text-4xl pb-20'>

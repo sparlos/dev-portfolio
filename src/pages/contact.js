@@ -1,12 +1,11 @@
 import React from 'react'
 
-import { motion } from 'framer-motion'
-import SEO from '../components/seo'
-
 import { TransitionState } from 'gatsby-plugin-transition-link'
-import TransitionLinkDefault from '../components/TransitionLinkDefault'
+import TransitionLinkDefault from '../components/utility/TransitionLinkDefault'
 
-import Icon from '../components/Icon'
+import SEO from '../components/utility/seo'
+
+import { motion } from 'framer-motion'
 
 import {
   FaLinkedin,
@@ -16,8 +15,14 @@ import {
   FaCodepen,
 } from 'react-icons/fa'
 
+import Icon from '../components/Icon'
+
 const contact = () => {
   const containerVariants = {
+    hidden: {
+      opacity: 0,
+      scaleX: 0,
+    },
     show: {
       opacity: 1,
       scaleX: 1,
@@ -29,10 +34,6 @@ const contact = () => {
         delayChildren: 0.3,
         staggerChildren: 0.05,
       },
-    },
-    hidden: {
-      opacity: 0,
-      scaleX: 0,
     },
     exit: {
       opacity: 0,

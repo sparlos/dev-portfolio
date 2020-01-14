@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import './NavbarToggle.scss'
+import './styles/NavbarToggle.scss'
 
 const gray900 = '#1A202C'
 const gray100 = '#F7FAFC'
