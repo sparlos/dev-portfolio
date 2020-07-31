@@ -7,8 +7,6 @@ import SEO from '../components/utility/seo'
 
 import { motion } from 'framer-motion'
 
-import resume from '../data/resume.pdf'
-
 const About = () => {
   const variants = {
     hidden: {
@@ -58,20 +56,11 @@ const About = () => {
           <h1 className='heading-main'>About</h1>
           <div className='mt-12 md:leading-relaxed'>
             <p className='mt-6'>
-              I'm Stephen, a driven young professional looking to enter the
-              world of full stack web design & development. I've spent the last
+              I'm Stephen, a driven young professional in the world of full stack web design & development. I've spent the last
               few years honing my skills in top web technologies including&nbsp;
               <b>
                 React, jQuery, SQL, PHP, Node, SASS & SCSS, Bootstrap, VS Code,
                 Figma, WordPress, Python, Vue, MongoDB, and GraphQL.&nbsp;
-                <a
-                  href={resume}
-                  className='link'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  You can find my full resume here.
-                </a>
               </b>
             </p>
             <p className='mt-6'>
