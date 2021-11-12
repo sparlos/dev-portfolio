@@ -14,9 +14,6 @@ module.exports = {
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-sass`,
-      options: {
-        data: `@import "${__dirname}/src/styles/styles";`,
-      },
     },
     `gatsby-transformer-remark`,
     {
