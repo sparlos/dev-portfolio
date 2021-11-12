@@ -6,6 +6,6 @@ maintech: WordPress,PHP,Bootstrap
 tags: HTML,CSS,JS,WordPress,PHP,Bootstrap
 position: 4
 ---
-A [website](http://bdgconnect.com/) created for the Baseball Development Group organization that highlights my ability to produce a WordPress theme from scratch, based on a customer design. The site is highly customizable and can be edited  by the owner/operator, making it easy to regularly update content. This is particularly important on the site’s “about us” page where the list  of team members varies constantly.
+A website created for the Baseball Development Group organization that highlights my ability to produce a WordPress theme from scratch, based on a customer design. The site is highly customizable and can be edited  by the owner/operator, making it easy to regularly update content. This is particularly important on the site’s “about us” page where the list  of team members varies constantly.
 
 I used Bootstrap to power mobile responsivity and I hand-coded custom animations to power the button hover effects and the navbar expansion on mobile.
