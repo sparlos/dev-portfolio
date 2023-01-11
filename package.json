@@ -17,7 +17,7 @@
     "gatsby-plugin-transition-link": "^1.17.5",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.42",
-    "gatsby-transformer-remark": "^2.6.42",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.9",
     "gsap": "^3.0.4",
     "prop-types": "^15.7.2",
